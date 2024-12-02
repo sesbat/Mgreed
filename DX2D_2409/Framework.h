@@ -147,11 +147,18 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Objects/Action/RobotJump.h"
 #include "Objects/Action/RobotMelee.h"
 #include "Objects/Action/RobotShoot.h"
+#include "Objects/Action/RobotDead.h"
+#include "Objects/Action/Boss/Boss.h"
+#include "Objects/Action/Boss/BossAction.h"
+#include "Objects/Action/Boss/BossLaser.h"
+#include "Objects/Action/Boss/BossDie.h"
+#include "Objects/Action/Boss/BossMove.h"
 
 //Manager Header
 #include "Scenes/Scene.h"
 #include "Manager/SceneManager.h"
 #include "Manager/GameManager.h"
+#include "Manager/CollisionManager.h"
 
 extern ID3D11Device* device;
 extern ID3D11DeviceContext* deviceContext;

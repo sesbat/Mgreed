@@ -14,8 +14,8 @@ void RobotJump::Update()
 {
     Loop();
 
-    if(curState != END)
-        robot->Gravity();
+    /*if(curState != END)
+        robot->Gravity();*/
 
     if (curState != START && jumpCount < MAX_JUMP_COUNT && KEY->Down('W'))
     {

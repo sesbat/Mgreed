@@ -5,6 +5,11 @@ Action::Action(string path, string file, bool isLoop, float speed)
     LoadClip(path, file, isLoop, speed);
 }
 
+Action::Action(wstring file, int maxFrameX, int maxFrameY, bool isLoop, float speed)
+{
+    LoadClip(file, maxFrameX, maxFrameY, isLoop, speed);
+}
+
 Action::~Action()
 {
     for (Clip* clip : clips)

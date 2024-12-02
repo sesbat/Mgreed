@@ -5,6 +5,7 @@ class Action
 public:
     Action() = default;
     Action(string path, string file, bool isLoop, float speed = 1.0f);
+    Action(wstring file, int maxFrameX, int maxFrameY, bool isLoop, float speed = 1.0f);
     virtual ~Action();
 
     virtual void Update();

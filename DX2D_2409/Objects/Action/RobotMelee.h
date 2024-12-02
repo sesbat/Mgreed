@@ -9,6 +9,7 @@ public:
     void Update() override;
     void Render() override;
 
+    BoxCollider* GetAttackCollider() { return attackCollider; }
 private:
     void OnActiveCollider();
     void OnInactiveCollider();

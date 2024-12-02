@@ -5,15 +5,20 @@ Robot::Robot()
     UpdateSize(Vector2(150, 230));
     pos = CENTER;
 
-    CreateActions();
+    hpBar = new Slider(L"Textures/UI/HealthBarFront.png",
+        L"Textures/UI/HealthBarBack.png");
+    hpBar->SetParent(this);
+    hpBar->SetPos(0, 150);
 
-    SetActionState(JUMP);
+    CreateActions();
+    //SetActionState(JUMP);
 }
 
 Robot::~Robot()
 {
     for (pair<ActionState, Action*> action : actions)
         delete action.second;
+    delete hpBar;
 }
 
 void Robot::Update()
@@ -24,14 +29,20 @@ void Robot::Update()
     Attack();    
     Jump();
     SetDirection();
+    Gravity();
+    CollisionCheck();
+   hpBar->UpdateWorld();
 
     actions[curState]->Update();
 }
 
 void Robot::Render()
 {
+    if (!isActive) return;
+
     BoxCollider::Render();
     actions[curState]->Render();
+    hpBar->Render();
 }
 
 void Robot::Land()
@@ -84,6 +95,25 @@ void Robot::SetDirection()
         rot.y = PI;
 }
 
+void Robot::Damage()
+{
+    hp--;
+
+    hpBar->SetAmount(hp / 5.0f);
+    if (hp == 0)
+        SetActionState(DIE);
+}
+
+void Robot::CollisionCheck()
+{
+    RobotMelee* melee = dynamic_cast<RobotMelee*>(actions[MELEE]);
+    if (boss->IsCollision(melee->GetAttackCollider()))
+    {
+        boss->Damage();
+        melee->GetAttackCollider()->SetActive(false);
+    }
+}
+
 //void Robot::Animation()
 //{
 //    if (curState == ATTACK) return;
@@ -113,6 +143,23 @@ void Robot::EndAttack()
     SetActionState(IDLE);
 }
 
+void Robot::EndDie()
+{
+    SetActive(false);
+}
+
+void Robot::Gravity()
+{
+    RigidbodyObject::Gravity();
+    if (Bottom() < 0.0f)
+    {
+        SetVelocityY(0.0f);
+        Vector2 pos = GetPos();
+        pos.y = HalfSize().y;
+        SetPos(pos);
+    }
+}
+
 void Robot::CreateActions()
 {
     actions[IDLE] = new Action("Textures/Robot/", "Robot_Idle.xml", true);
@@ -120,4 +167,5 @@ void Robot::CreateActions()
     actions[JUMP] = new RobotJump(this);
     actions[MELEE] = new RobotMelee(this);
     actions[SHOOT] = new RobotShoot(this);
+    actions[DIE] = new RobotDead(this);
 }

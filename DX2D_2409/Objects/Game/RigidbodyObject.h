@@ -15,7 +15,7 @@ public:
     void Update();
 
     void HorizontalMove(bool isRight);
-    void Gravity();
+    virtual void Gravity();
 
     void SetVelocityY(float velocityY) { velocity.y = velocityY; }
 
