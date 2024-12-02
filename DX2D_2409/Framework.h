@@ -3,7 +3,7 @@
 #include "targetver.h"
 #define WIN32_LEAN_AND_MEAN
 
-#define WIN_START_X -1800
+#define WIN_START_X 0
 #define WIN_START_Y 0
 
 #define SCREEN_WIDTH 1280

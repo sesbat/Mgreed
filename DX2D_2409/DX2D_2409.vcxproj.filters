@@ -491,6 +491,5 @@
     <FxCompile Include="Shaders\Slider.hlsl" />
     <FxCompile Include="Shaders\Filter.hlsl" />
     <FxCompile Include="Shaders\Multi.hlsl" />
-    <FxCompile Include="Shaders\OutLine.hlsl" />
   </ItemGroup>
 </Project>

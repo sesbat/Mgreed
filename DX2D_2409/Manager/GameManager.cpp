@@ -100,7 +100,7 @@ void GameManager::Init()
 
     Font::Get()->AddColor("White", 1, 1, 1);
     Font::Get()->AddColor("Black", 0, 0, 0);
-    Font::Get()->AddStyle("Default", L"�ü�ü");
-    Font::Get()->AddStyle("Button", L"���� ���", 20,
+    Font::Get()->AddStyle("Default", L"Arial");
+    Font::Get()->AddStyle("Button", L"Arial", 20,
         DWRITE_TEXT_ALIGNMENT_CENTER, DWRITE_PARAGRAPH_ALIGNMENT_FAR);    
 }
