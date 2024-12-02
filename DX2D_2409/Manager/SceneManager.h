@@ -11,6 +11,7 @@ private:
 public:
     void Update();
 
+    void PreRender();
     void Render();
     void PostRender();
 
