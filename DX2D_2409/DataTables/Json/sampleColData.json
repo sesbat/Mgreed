@@ -1,0 +1,23 @@
+{
+  "colCount": 2,
+  "cols": [
+    {
+      "path": "Textures/Acade/Brick.png",
+      "startPos": {
+        "x": 640,
+        "y": 0
+      },
+      "Widthcount": 20,
+      "heightCount": 1
+    },
+    {
+      "path": "Textures/Acade/Brick.png",
+      "startPos": {
+        "x": 640,
+        "y": 150
+      },
+      "Widthcount": 5,
+      "heightCount": 1
+    }
+  ]
+}

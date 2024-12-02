@@ -2,7 +2,9 @@
 
 BrickManager::BrickManager()
 {
-    bricks.push_back(new ImageObject(L"Textures/Acade/Brick.png"));
+	Vector2 stertPos = { 5,0 };
+	Vector2 endPos = { 10,5 };
+    bricks.push_back(new ImageObject(L"Textures/Acade/Brick.png", stertPos, endPos));
     bricks.back()->SetPos(CENTER);
     bricks.back()->Update();
     bricks.push_back(new ImageObject(L"Textures/Acade/Brick.png"));

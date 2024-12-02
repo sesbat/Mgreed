@@ -13,7 +13,7 @@ void RigidbodyObject::Update()
     velocity.x = GameMath::Clamp(-MOVE_SPEED, MOVE_SPEED, velocity.x);
     velocity.x = GameMath::Lerp(velocity.x, 0.0f, DECELELATION * DELTA);
 
-    //velocity.y -= GRAVITY * DELTA;
+    velocity.y -= GRAVITY * DELTA;
 
     pos += velocity * DELTA;
 
