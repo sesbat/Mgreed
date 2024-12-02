@@ -106,6 +106,7 @@ void Robot::Damage()
 
 void Robot::CollisionCheck()
 {
+    if (boss == nullptr) return;
     RobotMelee* melee = dynamic_cast<RobotMelee*>(actions[MELEE]);
     if (boss->IsCollision(melee->GetAttackCollider()))
     {

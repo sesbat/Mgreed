@@ -30,7 +30,7 @@ RenderTargetScene::RenderTargetScene()
     renderTextures[0]->GetMaterial()->SetShader(L"Shaders/Filter.hlsl");
     renderTextures[1]->GetMaterial()->SetShader(L"Shaders/Outline.hlsl");
 
-    valueBuffer = new IntValueBuffer();
+    intValueBuffer = new IntValueBuffer();
 
 }
 
@@ -38,7 +38,7 @@ RenderTargetScene::~RenderTargetScene()
 {
     delete bg;
     delete robot;
-    delete valueBuffer;
+    delete intValueBuffer;
 }
 
 void RenderTargetScene::Update()
@@ -56,7 +56,7 @@ void RenderTargetScene::PreRender()
 
 void RenderTargetScene::Render()
 {
-    valueBuffer->SetPS(2);
+    intValueBuffer->SetPS(2);
 
     for(Quad* renderTexture : renderTextures)
         renderTexture->Render();
@@ -64,6 +64,6 @@ void RenderTargetScene::Render()
 
 void RenderTargetScene::PostRender()
 {
-    ImGui::DragInt("Select", &valueBuffer->Get()[0]);
-    ImGui::DragInt("Scale", &valueBuffer->Get()[1]);
+    ImGui::DragInt("Select", &intValueBuffer->Get()[0]);
+    ImGui::DragInt("Scale", &intValueBuffer->Get()[1]);
 }

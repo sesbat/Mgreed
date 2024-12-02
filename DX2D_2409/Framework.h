@@ -97,6 +97,7 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Framework/Render/Texture.h"
 #include "Framework/Render/Material.h"
 #include "Framework/Render/Frame.h"
+#include "Framework/Render/RenderTarget.h"
 #include "Framework/Render/Clip.h"
 
 #include "Framework/Environment/Camera.h"
