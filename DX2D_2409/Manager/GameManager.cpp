@@ -9,6 +9,7 @@
 #include "Scenes/UIScene.h"
 #include "Scenes/AnimationScene.h"
 #include "Scenes/ShaderScene.h"
+#include "Scenes/SampleScene.h"
 #include "Scenes/RenderTargetScene.h"
 
 GameManager::GameManager()
@@ -28,6 +29,7 @@ GameManager::GameManager()
     //SceneManager::Get()->Add("Start", new AcadeScene());   
     //SceneManager::Get()->Add("Start", new AnimationScene());
     //SceneManager::Get()->Add("Start", new ShaderScene());
+    //SceneManager::Get()->Add("Start", new SampleScene());
     SceneManager::Get()->Add("Start", new RenderTargetScene());
 
     SceneManager::Get()->ChangeScene("Start");

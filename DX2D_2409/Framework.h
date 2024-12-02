@@ -161,6 +161,8 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Manager/GameManager.h"
 #include "Manager/CollisionManager.h"
 
+#include "Objects/SamplePlayer.h"
+
 extern ID3D11Device* device;
 extern ID3D11DeviceContext* deviceContext;
 extern IDXGISwapChain* swapChain;
