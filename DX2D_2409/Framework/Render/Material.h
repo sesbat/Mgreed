@@ -26,6 +26,7 @@ public:
     void SetShader(wstring shaderFile);    
 
     void SetTexture(wstring file);
+    void SetTexture(Texture* texture) { this->texture = texture; }
     void SetColor(float r, float g, float b, float a = 1.0f) { color.tintColor = { r, g, b, a }; }
     void SetColor(Float4 color) { this->color.tintColor = color; }
     void SetRemoveColor(float r, float g, float b, float a = 1.0f) { color.removeColor = { r, g, b, a }; }

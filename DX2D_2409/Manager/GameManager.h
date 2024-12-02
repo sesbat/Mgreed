@@ -7,6 +7,8 @@ public:
     ~GameManager();
 
     void Update();
+
+    void PreRender();
     void Render();
 
 private:

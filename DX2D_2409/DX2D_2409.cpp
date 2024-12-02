@@ -72,6 +72,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         {
             gameManager->Update();
 
+            gameManager->PreRender();
+
+            deviceContext->OMSetRenderTargets(1, &renderTargetView, nullptr);
+
             float clearColor[4] = { 0.0f, 0.125f, 0.3f, 1.0f };
             deviceContext->ClearRenderTargetView(renderTargetView, clearColor);
 
@@ -120,9 +124,7 @@ void Init()
 
     swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)&backBuffer);
     device->CreateRenderTargetView(backBuffer, nullptr, &renderTargetView);
-    backBuffer->Release();
-
-    deviceContext->OMSetRenderTargets(1, &renderTargetView, nullptr);
+    backBuffer->Release();    
     ///////////////////////////////////////////////////////////////    
 }
 

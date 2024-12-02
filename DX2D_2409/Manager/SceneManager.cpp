@@ -16,6 +16,13 @@ void SceneManager::Update()
     curScene->Update();
 }
 
+void SceneManager::PreRender()
+{
+    if (curScene == nullptr) return;
+
+    curScene->PreRender();
+}
+
 void SceneManager::Render()
 {
     if (curScene == nullptr) return;
