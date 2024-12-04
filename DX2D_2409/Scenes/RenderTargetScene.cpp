@@ -20,7 +20,7 @@ RenderTargetScene::RenderTargetScene()
         temp.y = i < 2 ? offset.y : -offset.y;
         Vector2 pos = CENTER + temp;
 
-        renderTextures[i] = new Quad(CENTER * 2);
+        renderTextures[i] = new Quad(CENTER);
         renderTextures[i]->SetPos(pos);
         renderTextures[i]->UpdateWorld();
         renderTextures[i]->GetMaterial()->SetTexture(targetTexture);
@@ -30,15 +30,18 @@ RenderTargetScene::RenderTargetScene()
     renderTextures[0]->GetMaterial()->SetShader(L"Shaders/Filter.hlsl");
     renderTextures[1]->GetMaterial()->SetShader(L"Shaders/Outline.hlsl");
 
-    intValueBuffer = new IntValueBuffer();
-
+    valueBuffer = new IntValueBuffer();
+    floatValueBuffer = new FloatValueBuffer();
+    floatValueBuffer->Get()[0] = SCREEN_WIDTH;
+    floatValueBuffer->Get()[1] = SCREEN_HEIGHT;
+    floatValueBuffer->Get()[2] = 1.0f;
 }
 
 RenderTargetScene::~RenderTargetScene()
 {
     delete bg;
     delete robot;
-    delete intValueBuffer;
+    delete valueBuffer;
 }
 
 void RenderTargetScene::Update()
@@ -56,7 +59,8 @@ void RenderTargetScene::PreRender()
 
 void RenderTargetScene::Render()
 {
-    intValueBuffer->SetPS(2);
+    valueBuffer->SetPS(2);
+    floatValueBuffer->SetPS(3);
 
     for(Quad* renderTexture : renderTextures)
         renderTexture->Render();
@@ -64,6 +68,9 @@ void RenderTargetScene::Render()
 
 void RenderTargetScene::PostRender()
 {
-    ImGui::DragInt("Select", &intValueBuffer->Get()[0]);
-    ImGui::DragInt("Scale", &intValueBuffer->Get()[1]);
+    renderTextures[1]->GetMaterial()->Edit();
+
+    ImGui::DragInt("Select", &valueBuffer->Get()[0]);
+    ImGui::DragInt("Scale", &valueBuffer->Get()[1]);
+    ImGui::DragFloat("Weight", &floatValueBuffer->Get()[2]);
 }

@@ -41,7 +41,8 @@ public:
     void SetTag(string tag) { this->tag = tag; }
 
     string GetTag() { return tag; }    
-
+    Matrix GetWorld() { return world; }
+    void SetWorld(Matrix world) { this->world = world; }
 protected:
     string tag;
     bool isActive = true;

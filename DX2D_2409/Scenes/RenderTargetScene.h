@@ -19,5 +19,6 @@ private:
     RenderTarget* renderTarget;
     Quad* renderTextures[4];
 
-    IntValueBuffer* intValueBuffer;
+    IntValueBuffer* valueBuffer;
+    FloatValueBuffer* floatValueBuffer;
 };

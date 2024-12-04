@@ -11,6 +11,8 @@
 #include "Scenes/ShaderScene.h"
 #include "Scenes/SampleScene.h"
 #include "Scenes/RenderTargetScene.h"
+#include "Scenes/InstancingScene.h"
+#include "Scenes/EditorScene.h"
 
 GameManager::GameManager()
 {
@@ -30,7 +32,9 @@ GameManager::GameManager()
     //SceneManager::Get()->Add("Start", new AnimationScene());
     //SceneManager::Get()->Add("Start", new ShaderScene());
     //SceneManager::Get()->Add("Start", new SampleScene());
-    SceneManager::Get()->Add("Start", new RenderTargetScene());
+    //SceneManager::Get()->Add("Start", new RenderTargetScene());
+    //SceneManager::Get()->Add("Start", new InstancingScene());
+    SceneManager::Get()->Add("Start", new EditorScene());
 
     SceneManager::Get()->ChangeScene("Start");
 }
@@ -109,7 +113,7 @@ void GameManager::Init()
 
     Font::Get()->AddColor("White", 1, 1, 1);
     Font::Get()->AddColor("Black", 0, 0, 0);
-    Font::Get()->AddStyle("Default", L"±Ã¼­Ã¼");
-    Font::Get()->AddStyle("Button", L"¸¼Àº °íµñ", 20,
+    Font::Get()->AddStyle("Default", L"ï¿½Ã¼ï¿½Ã¼");
+    Font::Get()->AddStyle("Button", L"ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½", 20,
         DWRITE_TEXT_ALIGNMENT_CENTER, DWRITE_PARAGRAPH_ALIGNMENT_FAR);    
 }

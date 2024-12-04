@@ -23,7 +23,7 @@ cbuffer FrameBuffer : register(b1)
 	float2 maxFrame;
 }
 
-cbuffer OutlineBuffer : register(b1)
+cbuffer OutlineBuffer : register(b3)
 {
 	float2 imageSize;
 	float weight;
@@ -68,5 +68,22 @@ float4 PS(PixelInput input) : SV_TARGET
 		baseColor.b == removeColor.b)
 		baseColor.a = 0.0f;
 	
-	return baseColor * tintColor;
+	float count = 0;
+	
+	if(baseColor.a > 0.0f)
+		return baseColor;
+	
+	for (int y = -1; y <= 1; y++)
+	{
+		for (int x = -1; x <= 1; x++)
+		{
+			float2 offset = (float2(x, y) / imageSize) * weight;
+			count += map.Sample(samp, input.uv + offset).a;
+		}
+	}
+	
+	if (count > 0 && count < 9)
+		return tintColor;
+	
+	return baseColor;
 }

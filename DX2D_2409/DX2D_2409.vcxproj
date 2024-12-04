@@ -140,21 +140,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Manager\CollisionManager.h" />
-    <ClInclude Include="Objects\Action\Boss\BossMove.h" />
-    <ClInclude Include="Objects\Action\Boss\BossDie.h" />
-    <ClInclude Include="Objects\Action\Boss\Boss.h" />
     <ClInclude Include="DX2D_2409.h" />
+    <ClInclude Include="Objects\Acade\Tile.h" />
+    <ClInclude Include="Scenes\EditorScene.h" />
     <ClInclude Include="Framework.h" />
     <ClInclude Include="Framework\Buffer\ConstBuffer.h" />
     <ClInclude Include="Framework\Buffer\GlobalBuffer.h" />
+    <ClInclude Include="Framework\Buffer\VertexBuffer.h" />
     <ClInclude Include="Framework\Environment\Camera.h" />
     <ClInclude Include="Framework\Environment\Environment.h" />
     <ClInclude Include="Framework\Render\Clip.h" />
     <ClInclude Include="Framework\Render\Frame.h" />
     <ClInclude Include="Framework\Render\Material.h" />
+    <ClInclude Include="Framework\Render\RenderTarget.h" />
     <ClInclude Include="Framework\Render\Shader.h" />
     <ClInclude Include="Framework\Render\Texture.h" />
+    <ClInclude Include="Framework\Render\VertexShader.h" />
     <ClInclude Include="Framework\Utility\BinaryReader.h" />
     <ClInclude Include="Framework\Utility\BinaryWriter.h" />
     <ClInclude Include="Framework\Utility\Font.h" />
@@ -163,11 +164,18 @@
     <ClInclude Include="Framework\Utility\Timer.h" />
     <ClInclude Include="Framework\Utility\tinyxml2.h" />
     <ClInclude Include="Framework\Utility\Utility.h" />
+    <ClInclude Include="Manager\CollisionManager.h" />
     <ClInclude Include="Manager\SceneManager.h" />
     <ClInclude Include="Objects\Acade\BrickManager.h" />
     <ClInclude Include="Objects\Acade\Mario.h" />
+    <ClInclude Include="Objects\Action\Boss\Boss.h" />
+    <ClInclude Include="Objects\Action\Boss\BossAction.h" />
+    <ClInclude Include="Objects\Action\Boss\BossDie.h" />
+    <ClInclude Include="Objects\Action\Boss\BossLaser.h" />
+    <ClInclude Include="Objects\Action\Boss\BossMove.h" />
     <ClInclude Include="Objects\Action\Robot.h" />
     <ClInclude Include="Objects\Action\RobotAction.h" />
+    <ClInclude Include="Objects\Action\RobotDead.h" />
     <ClInclude Include="Objects\Action\RobotJump.h" />
     <ClInclude Include="Objects\Action\RobotMove.h" />
     <ClInclude Include="Objects\Action\RobotRun.h" />
@@ -198,41 +206,20 @@
     <ClInclude Include="Objects\Inventory\Store.h" />
     <ClInclude Include="Objects\Manager\DataManager.h" />
     <ClInclude Include="Objects\Manager\EventManager.h" />
+    <ClInclude Include="Objects\SamplePlayer.h" />
     <ClInclude Include="Objects\Shooting\Bullet.h" />
     <ClInclude Include="Objects\Shooting\BulletManager.h" />
     <ClInclude Include="Objects\Shooting\Player.h" />
     <ClInclude Include="Objects\UI\Button.h" />
     <ClInclude Include="Objects\UI\Slider.h" />
-    <ClInclude Include="rapidjson\allocators.h" />
-    <ClInclude Include="rapidjson\cursorstreamwrapper.h" />
-    <ClInclude Include="rapidjson\document.h" />
-    <ClInclude Include="rapidjson\encodedstream.h" />
-    <ClInclude Include="rapidjson\encodings.h" />
-    <ClInclude Include="rapidjson\filereadstream.h" />
-    <ClInclude Include="rapidjson\filewritestream.h" />
-    <ClInclude Include="rapidjson\fwd.h" />
-    <ClInclude Include="rapidjson\istreamwrapper.h" />
-    <ClInclude Include="rapidjson\memorybuffer.h" />
-    <ClInclude Include="rapidjson\memorystream.h" />
-    <ClInclude Include="rapidjson\ostreamwrapper.h" />
-    <ClInclude Include="rapidjson\pointer.h" />
-    <ClInclude Include="rapidjson\prettywriter.h" />
-    <ClInclude Include="rapidjson\rapidjson.h" />
-    <ClInclude Include="rapidjson\reader.h" />
-    <ClInclude Include="rapidjson\schema.h" />
-    <ClInclude Include="rapidjson\stream.h" />
-    <ClInclude Include="rapidjson\stringbuffer.h" />
-    <ClInclude Include="rapidjson\uri.h" />
-    <ClInclude Include="rapidjson\writer.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="Objects\Action\Boss\BossLaser.h" />
-    <ClInclude Include="Objects\Action\RobotDead.h" />
-    <ClInclude Include="Objects\SamplePlayer.h" />
-    <ClInclude Include="Scenes\SampleScene.h" />
     <ClInclude Include="Scenes\AcadeScene.h" />
     <ClInclude Include="Scenes\AnimationScene.h" />
     <ClInclude Include="Scenes\BreakOutScene.h" />
     <ClInclude Include="Scenes\CollisionScene.h" />
+    <ClInclude Include="Scenes\InstancingScene.h" />
+    <ClInclude Include="Scenes\RenderTargetScene.h" />
+    <ClInclude Include="Scenes\SampleScene.h" />
     <ClInclude Include="Scenes\Scene.h" />
     <ClInclude Include="Scenes\ShaderScene.h" />
     <ClInclude Include="Scenes\ShootingScene.h" />
@@ -245,21 +232,22 @@
     <ClInclude Include="Objects\Action\RobotMelee.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Objects\Action\Boss\BossMove.cpp" />
-    <ClCompile Include="Objects\Action\Boss\BossDie.cpp" />
-    <ClCompile Include="Objects\Action\Boss\Boss.cpp" />
     <ClCompile Include="DX2D_2409.cpp" />
+    <ClCompile Include="Scenes\EditorScene.cpp" />
     <ClCompile Include="Framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Framework\Buffer\ConstBuffer.cpp" />
+    <ClCompile Include="Framework\Buffer\VertexBuffer.cpp" />
     <ClCompile Include="Framework\Environment\Camera.cpp" />
     <ClCompile Include="Framework\Environment\Environment.cpp" />
     <ClCompile Include="Framework\Render\Clip.cpp" />
     <ClCompile Include="Framework\Render\Frame.cpp" />
     <ClCompile Include="Framework\Render\Material.cpp" />
+    <ClCompile Include="Framework\Render\RenderTarget.cpp" />
     <ClCompile Include="Framework\Render\Shader.cpp" />
     <ClCompile Include="Framework\Render\Texture.cpp" />
+    <ClCompile Include="Framework\Render\VertexShader.cpp" />
     <ClCompile Include="Framework\Utility\BinaryReader.cpp" />
     <ClCompile Include="Framework\Utility\BinaryWriter.cpp" />
     <ClCompile Include="Framework\Utility\Font.cpp" />
@@ -270,10 +258,14 @@
     <ClCompile Include="Manager\SceneManager.cpp" />
     <ClCompile Include="Objects\Acade\BrickManager.cpp" />
     <ClCompile Include="Objects\Acade\Mario.cpp" />
+    <ClCompile Include="Objects\Action\Boss\Boss.cpp" />
     <ClCompile Include="Objects\Action\Boss\BossAction.cpp" />
-    <ClCompile Include="Objects\Action\Boss\BossAction.h" />
+    <ClCompile Include="Objects\Action\Boss\BossDie.cpp" />
+    <ClCompile Include="Objects\Action\Boss\BossLaser.cpp" />
+    <ClCompile Include="Objects\Action\Boss\BossMove.cpp" />
     <ClCompile Include="Objects\Action\Robot.cpp" />
     <ClCompile Include="Objects\Action\RobotAction.cpp" />
+    <ClCompile Include="Objects\Action\RobotDead.cpp" />
     <ClCompile Include="Objects\Action\RobotJump.cpp" />
     <ClCompile Include="Objects\Action\RobotMove.cpp" />
     <ClCompile Include="Objects\Action\RobotRun.cpp" />
@@ -303,19 +295,19 @@
     <ClCompile Include="Objects\Inventory\Store.cpp" />
     <ClCompile Include="Objects\Manager\DataManager.cpp" />
     <ClCompile Include="Objects\Manager\EventManager.cpp" />
+    <ClCompile Include="Objects\SamplePlayer.cpp" />
     <ClCompile Include="Objects\Shooting\Bullet.cpp" />
     <ClCompile Include="Objects\Shooting\BulletManager.cpp" />
     <ClCompile Include="Objects\Shooting\Player.cpp" />
     <ClCompile Include="Objects\UI\Button.cpp" />
     <ClCompile Include="Objects\UI\Slider.cpp" />
-    <ClCompile Include="Objects\Action\Boss\BossLaser.cpp" />
-    <ClCompile Include="Objects\Action\RobotDead.cpp" />
-    <ClCompile Include="Objects\SamplePlayer.cpp" />
-    <ClCompile Include="Scenes\SampleScene.cpp" />
     <ClCompile Include="Scenes\AcadeScene.cpp" />
     <ClCompile Include="Scenes\AnimationScene.cpp" />
     <ClCompile Include="Scenes\BreakOutScene.cpp" />
     <ClCompile Include="Scenes\CollisionScene.cpp" />
+    <ClCompile Include="Scenes\InstancingScene.cpp" />
+    <ClCompile Include="Scenes\RenderTargetScene.cpp" />
+    <ClCompile Include="Scenes\SampleScene.cpp" />
     <ClCompile Include="Scenes\ShaderScene.cpp" />
     <ClCompile Include="Scenes\ShootingScene.cpp" />
     <ClCompile Include="Scenes\TextureScene.cpp" />
@@ -345,7 +337,19 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
     </FxCompile>
+    <FxCompile Include="Shaders\Instancing.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
     <FxCompile Include="Shaders\Multi.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Shaders\Outline.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>

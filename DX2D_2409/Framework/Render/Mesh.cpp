@@ -8,11 +8,16 @@ Mesh::~Mesh()
 
 void Mesh::Draw(D3D11_PRIMITIVE_TOPOLOGY type)
 {
+    SetMesh(type);
+
+    deviceContext->DrawIndexed(indices.size(), 0, 0);
+}
+
+void Mesh::SetMesh(D3D11_PRIMITIVE_TOPOLOGY type)
+{
     deviceContext->IASetVertexBuffers(0, 1, &vertexBuffer, &stride, &offset);
     deviceContext->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
     deviceContext->IASetPrimitiveTopology(type);
-
-    deviceContext->DrawIndexed(indices.size(), 0, 0);
 }
 
 void Mesh::CreateMesh()
@@ -38,7 +43,7 @@ void Mesh::CreateMesh()
         bufferDesc.BindFlags = D3D11_BIND_INDEX_BUFFER;
 
         D3D11_SUBRESOURCE_DATA subData = {};
-        subData.pSysMem = indices.data();//Ã¹¹øÂ° ³ëµåÀÇ ÁÖ¼Ò°ª
+        subData.pSysMem = indices.data();//Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½
 
         device->CreateBuffer(&bufferDesc, &subData, &indexBuffer);
     }

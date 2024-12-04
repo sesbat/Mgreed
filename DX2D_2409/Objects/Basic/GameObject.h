@@ -9,6 +9,9 @@ public:
     void Render(D3D11_PRIMITIVE_TOPOLOGY type = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
     Material* GetMaterial() { return material; }
+    Mesh* GetMesh() { return mesh; }
+
+    void SetWorld();
 
 private:
     void Init();
@@ -16,8 +19,5 @@ private:
 protected:    
     Mesh* mesh;
     Material* material;
-
-private:
-    
-    ID3D11Buffer* worldBuffer;    
+    MatrixBuffer* worldBuffer;
 };

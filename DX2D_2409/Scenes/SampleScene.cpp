@@ -75,7 +75,7 @@ SampleStageColData SampleScene::LoadFromJSON(const wstring& filePath)
 {
     SampleStageColData data;
 
-    // JSON ÆÄÀÏ ÀÐ±â
+    // JSON ï¿½ï¿½ï¿½ï¿½ ï¿½Ð±ï¿½
     ifstream file(filePath);
     if (!file.is_open()) {
 
@@ -85,7 +85,7 @@ SampleStageColData SampleScene::LoadFromJSON(const wstring& filePath)
     string jsonContent((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
     file.close();
 
-    // JSON ÆÄ½Ì
+    // JSON ï¿½Ä½ï¿½
     Document document;
     document.Parse(jsonContent.c_str());
 
@@ -94,7 +94,7 @@ SampleStageColData SampleScene::LoadFromJSON(const wstring& filePath)
         return data;
     }
 
-    // µ¥ÀÌÅÍ ÀÐ±â
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð±ï¿½
     data.colCount = document["colCount"].GetInt();
 
     const Value& colsArray = document["cols"];

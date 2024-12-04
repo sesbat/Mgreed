@@ -42,3 +42,26 @@ public:
 private:
 	float values[4] = {};
 };
+
+//class OutlineBuffer : public ConstBuffer
+//{
+//private:
+//	struct Data
+//	{
+//		Float4 color;
+//
+//		Float2 imageSize;
+//		int scale;
+//		float padding;
+//	};
+//
+//public:
+//	FloatValueBuffer() : ConstBuffer(&data, sizeof(Data))
+//	{
+//	}
+//
+//	float* Get() { return values; }
+//
+//private:
+//	Data data;
+//};

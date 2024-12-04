@@ -13,9 +13,9 @@ public:
     void Set();
 
 private:
-    ID3D11VertexShader* vertexShader;
+    VertexShader* vertexShader;
     ID3D11PixelShader* pixelShader;
-    ID3D11InputLayout* inputLayout;
+    
 
     static unordered_map<wstring, Shader*> shaders;
 };

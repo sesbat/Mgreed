@@ -72,7 +72,7 @@ void BlockManager::CollisionBall(Ball* ball)
         {
             block->Damage();
 
-            if (overlap.x < overlap.y)//ï¿½Â¿ï¿½ï¿½æµ¹
+            if (overlap.x < overlap.y)//ÁÂ¿ìÃæµ¹
             {
                 if (ball->GetPos().x > block->GetPos().x)
                 {
@@ -85,7 +85,7 @@ void BlockManager::CollisionBall(Ball* ball)
 
                 ball->HorizontalCollision();
             }
-            else//ï¿½ï¿½ï¿½ï¿½ï¿½æµ¹
+            else//»óÇÏÃæµ¹
             {
                 if (ball->GetPos().y > block->GetPos().y)
                 {

@@ -16,6 +16,8 @@
 
 #define PI 3.141592f
 
+#define FOR(n) for(int i = 0 ; i < n ; i++)
+
 #define DELTA Timer::Get()->GetElapsedTime()
 #define KEY Keyboard::Get()
 #define FONT Font::Get()
@@ -26,6 +28,7 @@
 #include <fstream>
 #include <functional>
 #include <assert.h>
+#include <sstream>
 //선형자료구조 - 삽입삭제
 #include <vector>
 #include <list>
@@ -46,6 +49,7 @@
 
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "d3dcompiler.lib")
+#pragma comment(lib, "dxguid.lib")
 
 //ImGui
 #include <imgui.h>
@@ -89,16 +93,19 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Framework/Utility/BinaryReader.h"
 #include "Framework/Utility/tinyxml2.h"
 
+#include "Framework/Buffer/VertexBuffer.h"
 #include "Framework/Buffer/ConstBuffer.h"
 #include "Framework/Buffer/GlobalBuffer.h"
 
 #include "Framework/Render/Mesh.h"
+#include "Framework/Render/VertexShader.h"
 #include "Framework/Render/Shader.h"
 #include "Framework/Render/Texture.h"
 #include "Framework/Render/Material.h"
-#include "Framework/Render/Frame.h"
 #include "Framework/Render/RenderTarget.h"
+#include "Framework/Render/Frame.h"
 #include "Framework/Render/Clip.h"
+#include "Framework/Render/RenderTarget.h"
 
 #include "Framework/Environment/Camera.h"
 #include "Framework/Environment/Environment.h"
@@ -131,6 +138,7 @@ typedef function<void(void*)> ObjectParamEvent;
 
 #include "Objects/Acade/Mario.h"
 #include "Objects/Acade/BrickManager.h"
+#include "Objects/Acade/Tile.h"
 
 #include "Objects/BreakOut/ControlBar.h"
 #include "Objects/BreakOut/Ball.h"
@@ -148,6 +156,7 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Objects/Action/RobotJump.h"
 #include "Objects/Action/RobotMelee.h"
 #include "Objects/Action/RobotShoot.h"
+
 #include "Objects/Action/RobotDead.h"
 #include "Objects/Action/Boss/Boss.h"
 #include "Objects/Action/Boss/BossAction.h"
