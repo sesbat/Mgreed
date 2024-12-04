@@ -246,6 +246,27 @@
     <ClInclude Include="Framework\Render\VertexShader.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Scenes\TileMapScene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Tile\MapEditor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Tile\EditTile.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\CollisionManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Acade\Tile.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\SamplePlayer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\SampleScene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
     <ClInclude Include="Objects\Action\Boss\Boss.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -264,19 +285,7 @@
     <ClInclude Include="Objects\Action\RobotDead.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Scenes\SampleScene.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Manager\CollisionManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Objects\SamplePlayer.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Scenes\EditorScene.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Objects\Acade\Tile.h">
+    <ClInclude Include="Objects\Tile\CollisionTile.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -494,6 +503,21 @@
     <ClCompile Include="Framework\Render\VertexShader.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Scenes\TileMapScene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Tile\MapEditor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Tile\EditTile.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\SamplePlayer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\SampleScene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="Objects\Action\Boss\Boss.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -512,13 +536,13 @@
     <ClCompile Include="Objects\Action\RobotDead.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Scenes\SampleScene.cpp">
+    <ClCompile Include="Objects\SokobanPlayer.h">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Objects\SamplePlayer.cpp">
+    <ClCompile Include="Objects\SokobanPlayer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Scenes\EditorScene.cpp">
+    <ClCompile Include="Objects\Tile\CollisionTile.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

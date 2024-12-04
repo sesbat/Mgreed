@@ -8,10 +8,10 @@ public:
 
     void AddColor(string key, float r, float g, float b);
 
-    //DWRITE_TEXT_ALIGNMENT_LEADING : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½    
-    //DWRITE_TEXT_ALIGNMENT_TRAILING : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-    //DWRITE_PARAGRAPH_ALIGNMENT_FAR : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-    //DWRITE_PARAGRAPH_ALIGNMENT_NEAR : ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //DWRITE_TEXT_ALIGNMENT_LEADING : ¿ÞÂÊÁ¤·Ä    
+    //DWRITE_TEXT_ALIGNMENT_TRAILING : ¿À¸¥ÂÊÁ¤·Ä
+    //DWRITE_PARAGRAPH_ALIGNMENT_FAR : À§ÂÊÁ¤·Ä
+    //DWRITE_PARAGRAPH_ALIGNMENT_NEAR : ¾Æ·¿ÂÊÁ¤·Ä
     void AddStyle(string key, wstring font, float size = 20.0f,
         DWRITE_TEXT_ALIGNMENT textAlignment = DWRITE_TEXT_ALIGNMENT_TRAILING,
         DWRITE_PARAGRAPH_ALIGNMENT paragraphAlignment = DWRITE_PARAGRAPH_ALIGNMENT_CENTER,

@@ -21,12 +21,13 @@ InstancingScene::InstancingScene()
     //    quads[i] = quad;
     //}
 
-    quad = new Quad(L"Textures/Tiles/tile1.png");
+    quad = new Quad(L"Textures/Acade/mario.png", Vector2(),
+                Vector2(1.0f/8.0f, 1.0f/4.0f));
     quad->GetMaterial()->SetShader(L"Shaders/Instancing.hlsl");
 
-    instances.resize(WIDTH * HEIGHT);
+    instances.resize(SIZE);
 
-    for (Matrix& instance : instances)
+    for (InstanceData& instance : instances)
     {
         Transform transform;
         float x = GameMath::Random(0, SCREEN_WIDTH);
@@ -39,11 +40,15 @@ InstancingScene::InstancingScene()
         //transform.SetLocalScale(x, y);
         transform.UpdateWorld();
 
-        instance = XMMatrixTranspose(transform.GetWorld());
+        instance.maxFrame = { 8, 4 };
+        instance.curFrame.x = GameMath::Random(0, 8);
+        instance.curFrame.y = GameMath::Random(0, 4);
+
+        instance.transform = XMMatrixTranspose(transform.GetWorld());
         //instance = XMMatrixIdentity();
     }
 
-    instanceBuffer = new VertexBuffer(instances.data(), sizeof(Matrix), WIDTH * HEIGHT);
+    instanceBuffer = new VertexBuffer(instances.data(), sizeof(InstanceData), SIZE);
 }
 
 InstancingScene::~InstancingScene()
@@ -70,7 +75,7 @@ void InstancingScene::Render()
     quad->GetMesh()->SetMesh();
     //quad->SetWorld();
 
-    deviceContext->DrawIndexedInstanced(6, WIDTH * HEIGHT, 0, 0, 0);
+    deviceContext->DrawIndexedInstanced(6, SIZE, 0, 0, 0);
 }
 
 void InstancingScene::PostRender()

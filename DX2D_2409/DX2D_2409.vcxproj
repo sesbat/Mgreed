@@ -140,9 +140,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Objects\Tile\CollisionTile.h" />
     <ClInclude Include="DX2D_2409.h" />
-    <ClInclude Include="Objects\Acade\Tile.h" />
-    <ClInclude Include="Scenes\EditorScene.h" />
     <ClInclude Include="Framework.h" />
     <ClInclude Include="Framework\Buffer\ConstBuffer.h" />
     <ClInclude Include="Framework\Buffer\GlobalBuffer.h" />
@@ -168,6 +167,7 @@
     <ClInclude Include="Manager\SceneManager.h" />
     <ClInclude Include="Objects\Acade\BrickManager.h" />
     <ClInclude Include="Objects\Acade\Mario.h" />
+    <ClInclude Include="Objects\Acade\Tile.h" />
     <ClInclude Include="Objects\Action\Boss\Boss.h" />
     <ClInclude Include="Objects\Action\Boss\BossAction.h" />
     <ClInclude Include="Objects\Action\Boss\BossDie.h" />
@@ -210,6 +210,8 @@
     <ClInclude Include="Objects\Shooting\Bullet.h" />
     <ClInclude Include="Objects\Shooting\BulletManager.h" />
     <ClInclude Include="Objects\Shooting\Player.h" />
+    <ClInclude Include="Objects\Tile\EditTile.h" />
+    <ClInclude Include="Objects\Tile\MapEditor.h" />
     <ClInclude Include="Objects\UI\Button.h" />
     <ClInclude Include="Objects\UI\Slider.h" />
     <ClInclude Include="Resource.h" />
@@ -224,6 +226,7 @@
     <ClInclude Include="Scenes\ShaderScene.h" />
     <ClInclude Include="Scenes\ShootingScene.h" />
     <ClInclude Include="Scenes\TextureScene.h" />
+    <ClInclude Include="Scenes\TileMapScene.h" />
     <ClInclude Include="Scenes\TutorialScene.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
@@ -232,8 +235,8 @@
     <ClInclude Include="Objects\Action\RobotMelee.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Objects\Tile\CollisionTile.cpp" />
     <ClCompile Include="DX2D_2409.cpp" />
-    <ClCompile Include="Scenes\EditorScene.cpp" />
     <ClCompile Include="Framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
@@ -299,6 +302,10 @@
     <ClCompile Include="Objects\Shooting\Bullet.cpp" />
     <ClCompile Include="Objects\Shooting\BulletManager.cpp" />
     <ClCompile Include="Objects\Shooting\Player.cpp" />
+    <ClCompile Include="Objects\SokobanPlayer.cpp" />
+    <ClCompile Include="Objects\SokobanPlayer.h" />
+    <ClCompile Include="Objects\Tile\EditTile.cpp" />
+    <ClCompile Include="Objects\Tile\MapEditor.cpp" />
     <ClCompile Include="Objects\UI\Button.cpp" />
     <ClCompile Include="Objects\UI\Slider.cpp" />
     <ClCompile Include="Scenes\AcadeScene.cpp" />
@@ -311,6 +318,7 @@
     <ClCompile Include="Scenes\ShaderScene.cpp" />
     <ClCompile Include="Scenes\ShootingScene.cpp" />
     <ClCompile Include="Scenes\TextureScene.cpp" />
+    <ClCompile Include="Scenes\TileMapScene.cpp" />
     <ClCompile Include="Scenes\TutorialScene.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

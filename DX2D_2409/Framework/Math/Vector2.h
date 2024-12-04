@@ -34,6 +34,10 @@ struct Vector2 : public Float2
     {
         return Vector2(x / s, y / s);
     }
+    bool operator ==(const Vector2& v)
+    {
+        return x == v.x && y == v.y;
+    }
 
     void operator+=(const Vector2& v)
     {
@@ -76,6 +80,15 @@ struct Vector2 : public Float2
         }
 
         return 0.0f;
+    }
+
+    friend Vector2 operator*(const float& s, const Vector2& v)
+    {
+        return Vector2(s * v.x, s * v.y);
+    }
+    friend Vector2 operator/(const float& s, const Vector2 & v)
+    {
+        return Vector2(s / v.x, s / v.y);
     }
 
     float SqrMagnitude() const

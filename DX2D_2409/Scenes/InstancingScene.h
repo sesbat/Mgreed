@@ -3,9 +3,8 @@
 class InstancingScene : public Scene
 {
 private:
-    const UINT SIZE = 1000;
-    const UINT WIDTH = 10;
-    const UINT HEIGHT = 10;
+    const UINT SIZE = 1000;    
+
 public:
     InstancingScene();
     ~InstancingScene();
@@ -18,6 +17,6 @@ public:
     //vector<Quad*> quads;
     Quad* quad;
 
-    vector<Matrix> instances;
+    vector<InstanceData> instances;
     VertexBuffer* instanceBuffer;
 };

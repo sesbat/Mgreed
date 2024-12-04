@@ -12,7 +12,7 @@
 #include "Scenes/SampleScene.h"
 #include "Scenes/RenderTargetScene.h"
 #include "Scenes/InstancingScene.h"
-#include "Scenes/EditorScene.h"
+#include "Scenes/TileMapScene.h"
 
 GameManager::GameManager()
 {
@@ -34,7 +34,8 @@ GameManager::GameManager()
     //SceneManager::Get()->Add("Start", new SampleScene());
     //SceneManager::Get()->Add("Start", new RenderTargetScene());
     //SceneManager::Get()->Add("Start", new InstancingScene());
-    SceneManager::Get()->Add("Start", new EditorScene());
+    //SceneManager::Get()->Add("Start", new EditorScene());
+    SceneManager::Get()->Add("Start", new TileMapScene());
 
     SceneManager::Get()->ChangeScene("Start");
 }

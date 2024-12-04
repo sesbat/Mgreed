@@ -13,6 +13,13 @@ struct Vertex
     {}
 };
 
+struct InstanceData
+{
+    Matrix transform;
+    Float2 curFrame;
+    Float2 maxFrame;
+};
+
 class Mesh
 {
 public:

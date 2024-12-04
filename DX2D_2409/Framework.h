@@ -3,7 +3,7 @@
 #include "targetver.h"
 #define WIN32_LEAN_AND_MEAN
 
-#define WIN_START_X 0
+#define WIN_START_X -1800
 #define WIN_START_Y 0
 
 #define SCREEN_WIDTH 1280
@@ -102,7 +102,6 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Framework/Render/Shader.h"
 #include "Framework/Render/Texture.h"
 #include "Framework/Render/Material.h"
-#include "Framework/Render/RenderTarget.h"
 #include "Framework/Render/Frame.h"
 #include "Framework/Render/Clip.h"
 #include "Framework/Render/RenderTarget.h"
@@ -138,7 +137,6 @@ typedef function<void(void*)> ObjectParamEvent;
 
 #include "Objects/Acade/Mario.h"
 #include "Objects/Acade/BrickManager.h"
-#include "Objects/Acade/Tile.h"
 
 #include "Objects/BreakOut/ControlBar.h"
 #include "Objects/BreakOut/Ball.h"
@@ -164,6 +162,10 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Objects/Action/Boss/BossDie.h"
 #include "Objects/Action/Boss/BossMove.h"
 
+#include "Objects/Tile/EditTile.h"
+#include "Objects/Tile/CollisionTile.h"
+#include "Objects/Tile/MapEditor.h"
+
 //Manager Header
 #include "Scenes/Scene.h"
 #include "Manager/SceneManager.h"
@@ -171,6 +173,7 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Manager/CollisionManager.h"
 
 #include "Objects/SamplePlayer.h"
+#include "Objects/SokobanPlayer.h"
 
 extern ID3D11Device* device;
 extern ID3D11DeviceContext* deviceContext;

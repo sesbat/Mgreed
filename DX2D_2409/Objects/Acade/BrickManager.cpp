@@ -39,7 +39,7 @@ GameMath::Direction BrickManager::Push(IN BoxCollider* collider, OUT BoxCollider
         {
             outBrick = brick;
 
-            if (overlap.x < overlap.y)//ÁÂ¿ì Ãæµ¹
+            if (overlap.x < overlap.y)//ï¿½Â¿ï¿½ ï¿½æµ¹
             {
                 if (brick->GetGlobalPos().x > collider->GetGlobalPos().x)
                 {
@@ -55,7 +55,7 @@ GameMath::Direction BrickManager::Push(IN BoxCollider* collider, OUT BoxCollider
                         result = GameMath::Direction::RIGHT;
                 }
             }
-            else//»óÇÏÃæµ¹
+            else//ï¿½ï¿½ï¿½ï¿½ï¿½æµ¹
             {
                 if (brick->GetGlobalPos().y > collider->GetGlobalPos().y)
                 {

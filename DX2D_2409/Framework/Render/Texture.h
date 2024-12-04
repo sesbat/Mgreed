@@ -14,6 +14,9 @@ public:
         return Vector2(image.GetMetadata().width, image.GetMetadata().height);
     }
 
+    ID3D11ShaderResourceView* GetSRV() { return srv; }
+    wstring GetFile() { return file; }
+
 public:
     static Texture* Add(wstring file);
     static Texture* Add(wstring key, ID3D11ShaderResourceView* srv);
