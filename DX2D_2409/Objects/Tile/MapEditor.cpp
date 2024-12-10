@@ -76,7 +76,10 @@ void MapEditor::RenderTileSelection()
 	if (!selectedRoom) return;
 	if (ImGui::TreeNode("Select Tile"))
 	{
-		
+		for (int i = 0; i < tileSprites.size(); i++)
+		{
+
+		}
 		ImGui::TreePop();
 	}
 }

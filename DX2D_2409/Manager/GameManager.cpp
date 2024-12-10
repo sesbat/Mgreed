@@ -1,6 +1,7 @@
 #include "Framework.h"
 
 #include "Scenes/MapEditorScene.h"
+#include "Scenes/SampleScene.h"
 
 GameManager::GameManager()
 {
