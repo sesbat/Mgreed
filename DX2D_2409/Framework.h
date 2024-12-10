@@ -3,7 +3,7 @@
 #include "targetver.h"
 #define WIN32_LEAN_AND_MEAN
 
-#define WIN_START_X -1800
+#define WIN_START_X 0
 #define WIN_START_Y 0
 
 #define SCREEN_WIDTH 1280
@@ -28,6 +28,7 @@
 #include <fstream>
 #include <functional>
 #include <assert.h>
+#include <iostream>
 #include <sstream>
 //선형자료구조 - 삽입삭제
 #include <vector>
@@ -138,11 +139,6 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Objects/Acade/Mario.h"
 #include "Objects/Acade/BrickManager.h"
 
-#include "Objects/BreakOut/ControlBar.h"
-#include "Objects/BreakOut/Ball.h"
-#include "Objects/BreakOut/Block.h"
-#include "Objects/BreakOut/BlockManager.h"
-
 #include "Objects/Inventory/Item.h"
 #include "Objects/Inventory/Store.h"
 #include "Objects/Inventory/Inventory.h"
@@ -162,8 +158,11 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Objects/Action/Boss/BossDie.h"
 #include "Objects/Action/Boss/BossMove.h"
 
-#include "Objects/Tile/EditTile.h"
-#include "Objects/Tile/CollisionTile.h"
+#include "DataTables/FileData.h"
+#include "Objects/Tile/Tile.h"
+#include "Objects/Tile/Room.h"
+#include "Objects/Tile/Map.h"
+#include "Objects/Tile/TileLoader.h"
 #include "Objects/Tile/MapEditor.h"
 
 //Manager Header
@@ -171,9 +170,7 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Manager/SceneManager.h"
 #include "Manager/GameManager.h"
 #include "Manager/CollisionManager.h"
-
 #include "Objects/SamplePlayer.h"
-#include "Objects/SokobanPlayer.h"
 
 extern ID3D11Device* device;
 extern ID3D11DeviceContext* deviceContext;

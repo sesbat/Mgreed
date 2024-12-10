@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:9e435d7bd28b241cbdc212effb25dd47:df8b106c0e2af2f64c776bcdd8383edb:f1c6157e6f6bf11d5f060438f1fe5d73$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="WormIdle.png" width="29" height="297">
+    <sprite n="WormPassageIdle00.png" x="1" y="1" w="27" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="WormPassageIdle01.png" x="1" y="34" w="27" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="WormPassageIdle02.png" x="1" y="67" w="27" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="WormPassageIdle03.png" x="1" y="100" w="27" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="WormPassageIdle04.png" x="1" y="133" w="27" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="WormPassageIdle05.png" x="1" y="166" w="27" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="WormPassageIdle06.png" x="1" y="199" w="27" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="WormPassageIdle07.png" x="1" y="232" w="27" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="WormPassageIdle08.png" x="1" y="265" w="27" h="31" pX="0.5" pY="0.5"/>
+</TextureAtlas>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:5f0bba9214a2f762d384b891913f0a13:eec86ea7acda19f2f35e07bcb2a78b77:b42e3788f161cc11877d8b9b694c3b34$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="DoorEat.png" width="443" height="435">
+    <sprite n="DungeonEat00.png" x="1" y="1" w="117" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat01.png" x="120" y="1" w="79" h="75" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat02.png" x="201" y="1" w="79" h="84" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat03.png" x="282" y="1" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat04.png" x="363" y="1" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat05.png" x="1" y="88" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat06.png" x="82" y="88" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat07.png" x="163" y="88" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat08.png" x="244" y="88" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat09 - 복사본.png" x="325" y="88" w="117" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat10 - 복사본.png" x="1" y="175" w="72" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat11 - 복사본.png" x="75" y="175" w="72" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat12 - 복사본.png" x="149" y="175" w="72" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat13 - 복사본.png" x="223" y="175" w="72" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat14 - 복사본.png" x="297" y="175" w="74" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat15 - 복사본.png" x="1" y="262" w="72" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat16 - 복사본.png" x="75" y="262" w="70" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat17 - 복사본.png" x="147" y="262" w="68" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat18 - 복사본.png" x="217" y="262" w="67" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat19 - 복사본.png" x="286" y="262" w="66" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat20 - 복사본.png" x="354" y="262" w="58" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat21 - 복사본.png" x="1" y="349" w="55" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat22 - 복사본.png" x="58" y="349" w="68" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat23 - 복사본.png" x="128" y="349" w="67" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat24 - 복사본.png" x="197" y="349" w="36" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat25 - 복사본.png" x="235" y="349" w="29" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat26 - 복사본.png" x="266" y="349" w="69" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonEat27 - 복사본.png" x="337" y="349" w="66" h="85" pX="0.5" pY="0.5"/>
+</TextureAtlas>

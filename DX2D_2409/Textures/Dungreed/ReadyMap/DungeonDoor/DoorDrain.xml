@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:37088ff795f0cdee9d1c9c5d7b7fabd4:2bf1c3a3526b72a259000da05cd96a58:8a9a5ec1fedf8ea8320510cd07178136$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="DoorDrain.png" width="493" height="707">
+    <sprite n="DungeonIngurgitate00.png" x="1" y="1" w="119" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate01.png" x="122" y="1" w="79" h="75" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate02.png" x="203" y="1" w="79" h="84" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate03.png" x="284" y="1" w="80" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate04.png" x="366" y="1" w="80" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate05.png" x="1" y="88" w="80" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate06.png" x="83" y="88" w="80" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate07.png" x="165" y="88" w="80" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate08.png" x="247" y="88" w="80" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate09.png" x="329" y="88" w="126" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate10.png" x="1" y="175" w="125" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate11.png" x="128" y="175" w="108" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate12.png" x="238" y="175" w="121" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate13.png" x="361" y="175" w="126" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate14.png" x="1" y="262" w="123" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate15.png" x="126" y="262" w="108" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate16.png" x="236" y="262" w="121" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate17.png" x="359" y="262" w="126" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate18.png" x="1" y="349" w="125" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate19.png" x="128" y="349" w="108" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate20.png" x="238" y="349" w="121" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate21.png" x="361" y="349" w="126" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate22.png" x="1" y="436" w="123" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate23.png" x="126" y="436" w="108" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate24.png" x="236" y="436" w="121" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate25.png" x="359" y="436" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate26.png" x="1" y="523" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate27.png" x="82" y="523" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate28.png" x="163" y="523" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate29.png" x="244" y="523" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate30.png" x="325" y="523" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate31.png" x="406" y="523" w="79" h="85" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate32.png" x="1" y="610" w="119" h="53" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate33.png" x="122" y="610" w="72" h="34" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate34.png" x="196" y="610" w="72" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate35.png" x="270" y="610" w="72" h="30" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate36.png" x="344" y="610" w="72" h="29" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate37.png" x="418" y="610" w="74" h="26" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate38.png" x="1" y="665" w="72" h="25" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate39.png" x="75" y="665" w="70" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate40.png" x="147" y="665" w="68" h="21" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate41.png" x="217" y="665" w="67" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate42.png" x="286" y="665" w="66" h="19" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate43.png" x="354" y="665" w="58" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate44.png" x="414" y="665" w="55" h="15" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate45.png" x="1" y="692" w="68" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate46.png" x="71" y="692" w="67" h="11" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate47.png" x="140" y="692" w="36" h="8" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate48.png" x="178" y="692" w="29" h="7" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate49.png" x="209" y="692" w="69" h="12" pX="0.5" pY="0.5"/>
+    <sprite n="DungeonIngurgitate50.png" x="280" y="692" w="66" h="7" pX="0.5" pY="0.5"/>
+</TextureAtlas>

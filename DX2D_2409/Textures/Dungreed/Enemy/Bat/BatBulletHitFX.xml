@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:b1d7efa4d14aadfd5ec2bfae4a2d88a7:e5b1640e3259fc8458e05f93aceaa0b3:c5ffcd4648ab946754c65b9f3f32454d$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="BatBulletHitFX.png" width="60" height="60">
+    <sprite n="BabyBatBulletFX0.png" x="1" y="1" w="18" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="BabyBatBulletFX1.png" x="21" y="1" w="18" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="BabyBatBulletFX2.png" x="41" y="1" w="18" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="BabyBatBulletFX3.png" x="1" y="21" w="18" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="BabyBatBulletFX4.png" x="21" y="21" w="18" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="BabyBatBulletFX5.png" x="41" y="21" w="18" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="BabyBatBulletFX6.png" x="1" y="41" w="18" h="18" pX="0.5" pY="0.5"/>
+</TextureAtlas>

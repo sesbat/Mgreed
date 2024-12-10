@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:2fd4260f8b29c525a1d258999f148035:9bd6932fa1f6808770d554f6a82ff1d2:8a30ee6207a3fe15bfee754fc1bf1a23$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="GreatBowAttack.png" width="114" height="17">
+    <sprite n="GreatBow0.png" x="1" y="1" w="17" h="15" pX="0.5" pY="0.5"/>
+    <sprite n="GreatBow1.png" x="20" y="1" w="17" h="15" pX="0.5" pY="0.5"/>
+    <sprite n="GreatBow2.png" x="39" y="1" w="17" h="15" pX="0.5" pY="0.5"/>
+    <sprite n="GreatBow3.png" x="58" y="1" w="17" h="15" pX="0.5" pY="0.5"/>
+    <sprite n="GreatBow4.png" x="77" y="1" w="17" h="15" pX="0.5" pY="0.5"/>
+    <sprite n="GreatBow5.png" x="96" y="1" w="17" h="15" pX="0.5" pY="0.5"/>
+</TextureAtlas>

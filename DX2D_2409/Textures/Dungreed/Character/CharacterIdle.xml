@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:5671dd1ceb16c28b5f4c335c7c07f285:dd349c2c3a95e834375ac0a2db5728b0:1246b3d87184c69f1c02a27a115aefb5$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="CharacterIdle.png" width="81" height="24">
+    <sprite n="CharIdle0 #233096.png" x="1" y="1" w="18" h="22" pX="0.5" pY="0.5"/>
+    <sprite n="CharIdle1 #232453.png" x="21" y="1" w="18" h="22" pX="0.5" pY="0.5"/>
+    <sprite n="CharIdle2 #238030.png" x="41" y="1" w="18" h="22" pX="0.5" pY="0.5"/>
+    <sprite n="CharIdle3 #232944.png" x="61" y="1" w="19" h="21" pX="0.5" pY="0.5"/>
+</TextureAtlas>

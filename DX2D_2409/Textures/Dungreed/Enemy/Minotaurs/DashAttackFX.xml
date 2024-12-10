@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:2aa3de1123255767ef2ae0b37000f7fb:dfabef56bbc34022549b09c27eb93b4c:461bde7778a9613d5c5307757e9ed69d$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="DashAttackFX.png" width="204" height="99">
+    <sprite n="attack_e00.png" x="1" y="1" w="35" h="13" pX="0.5" pY="0.5"/>
+    <sprite n="attack_e01.png" x="38" y="1" w="76" h="32" pX="0.5" pY="0.5"/>
+    <sprite n="attack_e02.png" x="116" y="1" w="87" h="36" pX="0.5" pY="0.5"/>
+    <sprite n="attack_e03.png" x="1" y="39" w="88" h="36" pX="0.5" pY="0.5"/>
+    <sprite n="attack_e04.png" x="91" y="39" w="89" h="32" pX="0.5" pY="0.5"/>
+    <sprite n="attack_e05.png" x="1" y="77" w="77" h="21" pX="0.5" pY="0.5"/>
+    <sprite n="attack_e06.png" x="80" y="77" w="43" h="8" pX="0.5" pY="0.5"/>
+    <sprite n="attack_e07.png" x="125" y="77" w="22" h="5" pX="0.5" pY="0.5"/>
+</TextureAtlas>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:6870cb2001c6bda07df66d051e879a9f:bce27c469b9b72fb7764ab91f81d6598:2e2fbf322ad6746f004aa69575d636e2$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="GiantBatBulletHitFX.png" width="176" height="28">
+    <sprite n="RangeBallBulletHit0.png" x="1" y="1" w="18" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="RangeBallBulletHit1.png" x="21" y="1" w="20" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="RangeBallBulletHit2.png" x="43" y="1" w="22" h="22" pX="0.5" pY="0.5"/>
+    <sprite n="RangeBallBulletHit3.png" x="67" y="1" w="24" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="RangeBallBulletHit4.png" x="93" y="1" w="26" h="26" pX="0.5" pY="0.5"/>
+    <sprite n="RangeBallBulletHit5.png" x="121" y="1" w="26" h="26" pX="0.5" pY="0.5"/>
+    <sprite n="RangeBallBulletHit6.png" x="149" y="1" w="26" h="26" pX="0.5" pY="0.5"/>
+</TextureAtlas>

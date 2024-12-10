@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:dcacd938a9a28370a1c07c072b293f79:953223e74ef148e0f6e2584689270abe:8bc605206db4b0229fd8bf61a99f2e11$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="AEDIdle.png" width="204" height="16">
+    <sprite n="AED00.png" x="1" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED01.png" x="18" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED02.png" x="35" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED03.png" x="52" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED04.png" x="69" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED05.png" x="86" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED06.png" x="103" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED07.png" x="120" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED08.png" x="137" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED09.png" x="154" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED10.png" x="171" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+    <sprite n="AED11.png" x="188" y="1" w="15" h="14" pX="0.5" pY="0.5"/>
+</TextureAtlas>

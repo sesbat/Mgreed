@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:e6e8ef1abadd61a49f77e11bab6cf0e0:cfa7e77cb37ae286fd012d96e5fd7595:d036dc67c95f8e9b05d2372fed180ebc$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="RedMagicCircleFX.png" width="495" height="33">
+    <sprite n="RedMagicCircleFx00.png" x="1" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx01.png" x="34" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx02.png" x="67" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx03.png" x="100" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx04.png" x="133" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx05.png" x="166" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx06.png" x="199" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx07.png" x="232" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx08.png" x="265" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx09.png" x="298" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx10.png" x="331" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx11.png" x="364" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx12.png" x="397" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx13.png" x="430" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedMagicCircleFx14.png" x="463" y="1" w="31" h="31" pX="0.5" pY="0.5"/>
+</TextureAtlas>

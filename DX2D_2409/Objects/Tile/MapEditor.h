@@ -1,49 +1,31 @@
 #pragma once
+#include "Framework.h"
 
-class SokobanPlayer;
 class MapEditor : public Transform
 {
 public:
     MapEditor();
     ~MapEditor();
 
-    void PreRender();
     void Update();
     void Render();
     void Edit();
 
-    void Save(const string& filePath);
-    void Load(const string& filePath);
-
-    static Vector2 GetSelectFrame() { return selectFrame; }
-
 private:
-    void DragTile();
+    Vector2 tileSize = { 50,50 };
 
-    void CreateTiles();
-    void LoadTextures();
-    void RenderButtons();
-    void PlaceCollisionTile();
-    void UpdateInstanceData();
-    void PlayerCollision();
-private:
-    UINT width = 10, height = 10;
+    vector<Map*> maps;              
+    Map* selectedMap = nullptr;     
+    Room* selectedRoom = nullptr;    
+    Tile* selectedTile = nullptr;   
 
-    Quad* quad;
-    Quad* selectImage = nullptr;
+    vector<SpriteData> tileSprites;  
+    Texture* tileTexture = nullptr;  
 
-    vector<InstanceData> instances;
-    VertexBuffer* instanceBuffer;
+    int selectedTileIndex = -1;     
 
-    vector<EditTile*> editTiles;
-    vector<CollisionTile*> collisionTiles;
-    vector<Texture*> EditTextures;
-    vector<Texture*> collisionTextures;
-
-    static Vector2 selectFrame;
-
-    Texture* collisionSelectedTexture = nullptr;
-    bool collisionMode = false; 
-
-    SokobanPlayer* player;
+    void RenderMapSelection();
+    void RenderRoomSelection();
+    void RenderTileSelection();
+    void PlaceTile(int x, int y);
 };

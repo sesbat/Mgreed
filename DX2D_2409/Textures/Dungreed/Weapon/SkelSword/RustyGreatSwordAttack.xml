@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:46b7ad2b1e84838f66d13b5afb97001f:36c8144f0e69093d32b7796f00639670:ecce355ee82524e5632556e0d1ce0dc6$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="RustyGreatSwordAttack.png" width="60" height="308">
+    <sprite n="RustyGreatSword00.png" x="1" y="1" w="13" h="29" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword01.png" x="16" y="1" w="13" h="28" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword02.png" x="31" y="1" w="16" h="26" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword03.png" x="1" y="32" w="20" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword04.png" x="23" y="32" w="23" h="23" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword05.png" x="1" y="58" w="23" h="23" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword06.png" x="1" y="83" w="51" h="49" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword07.png" x="1" y="134" w="43" h="49" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword08.png" x="1" y="185" w="39" h="47" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword09.png" x="1" y="234" w="23" h="23" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword10.png" x="26" y="234" w="23" h="23" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword11.png" x="1" y="259" w="27" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword12.png" x="30" y="259" w="29" h="13" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword13.png" x="1" y="279" w="23" h="23" pX="0.5" pY="0.5"/>
+    <sprite n="RustyGreatSword14.png" x="26" y="279" w="15" h="28" pX="0.5" pY="0.5"/>
+</TextureAtlas>

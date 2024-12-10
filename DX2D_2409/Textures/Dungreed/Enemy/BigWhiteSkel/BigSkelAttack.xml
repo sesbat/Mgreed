@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:3eb55c4c8c2059590bb38ac6174c6bc3:7777682621556f24c36c563d65fbc206:462e4f70f70cdc4d257f28587699da22$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="BigSkelAttack.png" width="761" height="50">
+    <sprite n="BigWhiteSkelAttack00.png" x="1" y="1" w="61" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack01.png" x="64" y="1" w="61" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack02.png" x="127" y="1" w="61" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack03.png" x="190" y="1" w="61" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack04.png" x="253" y="1" w="61" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack05.png" x="316" y="1" w="61" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack06.png" x="379" y="1" w="61" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack07.png" x="442" y="1" w="61" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack08.png" x="505" y="1" w="61" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack09.png" x="568" y="1" w="65" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack10.png" x="635" y="1" w="62" h="48" pX="0.5" pY="0.5"/>
+    <sprite n="BigWhiteSkelAttack11.png" x="699" y="1" w="61" h="48" pX="0.5" pY="0.5"/>
+</TextureAtlas>

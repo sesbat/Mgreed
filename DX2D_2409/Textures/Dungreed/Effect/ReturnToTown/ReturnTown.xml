@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:a4e957e1169f9d144b038821bbd44737:35470d2c526c6bc8f8dd797c5c75425a:02c860518fbca0476b3a3a66567223df$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="ReturnTown.png" width="213" height="189">
+    <sprite n="ReturnToTown00.png" x="1" y="1" w="7" h="7" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown01.png" x="10" y="1" w="15" h="15" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown02.png" x="27" y="1" w="29" h="28" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown03.png" x="58" y="1" w="31" h="29" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown04.png" x="91" y="1" w="29" h="28" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown05.png" x="122" y="1" w="13" h="26" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown06.png" x="137" y="1" w="11" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown07.png" x="150" y="1" w="11" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown08.png" x="163" y="1" w="11" h="24" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown09.png" x="1" y="32" w="67" h="41" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown10.png" x="70" y="32" w="69" h="68" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown11.png" x="141" y="32" w="69" h="71" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown12.png" x="1" y="105" w="69" h="71" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown13.png" x="72" y="105" w="69" h="71" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown14.png" x="143" y="105" w="69" h="71" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown15.png" x="1" y="178" w="65" h="10" pX="0.5" pY="0.5"/>
+    <sprite n="ReturnToTown16.png" x="68" y="178" w="60" h="9" pX="0.5" pY="0.5"/>
+</TextureAtlas>

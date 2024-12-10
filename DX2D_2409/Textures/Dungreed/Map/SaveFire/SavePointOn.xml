@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:79344444cb88e354089f565ee8dc43c4:e9d6d6fbb88251820aa01d8e32d14cf5:20a481b15cc9655df67c99c8d1d879b0$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="SavePointOn.png" width="25" height="57">
+    <sprite n="SavePoint_TurnOn0.png" x="1" y="1" w="23" h="17" pX="0.5" pY="0.5"/>
+    <sprite n="SavePoint_TurnOn1.png" x="1" y="20" w="23" h="17" pX="0.5" pY="0.5"/>
+    <sprite n="SavePoint_TurnOn2.png" x="1" y="39" w="23" h="17" pX="0.5" pY="0.5"/>
+</TextureAtlas>

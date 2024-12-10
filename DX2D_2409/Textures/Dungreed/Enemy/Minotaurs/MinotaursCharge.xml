@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:8ba6f10efd9d05544e7d2c016bc81871:d026a058c87fb08639f05f9ee9c5040b:46d5f988ead0338618cc9baea637e759$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="MinotaursCharge.png" width="417" height="38">
+    <sprite n="MinotaursCharge0.png" x="1" y="1" w="51" h="36" pX="0.5" pY="0.5"/>
+    <sprite n="MinotaursCharge1.png" x="54" y="1" w="53" h="36" pX="0.5" pY="0.5"/>
+    <sprite n="MinotaursCharge2.png" x="109" y="1" w="53" h="36" pX="0.5" pY="0.5"/>
+    <sprite n="MinotaursCharge3.png" x="164" y="1" w="53" h="36" pX="0.5" pY="0.5"/>
+    <sprite n="MinotaursCharge4.png" x="219" y="1" w="52" h="33" pX="0.5" pY="0.5"/>
+    <sprite n="MinotaursCharge5.png" x="273" y="1" w="44" h="33" pX="0.5" pY="0.5"/>
+    <sprite n="MinotaursCharge6.png" x="319" y="1" w="44" h="33" pX="0.5" pY="0.5"/>
+    <sprite n="MinotaursCharge7.png" x="365" y="1" w="51" h="36" pX="0.5" pY="0.5"/>
+</TextureAtlas>

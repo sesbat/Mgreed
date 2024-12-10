@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:e7bd3e875d9053667529b322c8b8bdaa:328f25710ac5fd1f462a3a600310e1df:46d52ec40cbb13013929569e1eb58906$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="Candle2Idle.png" width="7" height="78">
+    <sprite n="CandleOn10.png" x="1" y="1" w="5" h="11" pX="0.5" pY="0.5"/>
+    <sprite n="CandleOn11.png" x="1" y="14" w="5" h="11" pX="0.5" pY="0.5"/>
+    <sprite n="CandleOn12.png" x="1" y="27" w="5" h="11" pX="0.5" pY="0.5"/>
+    <sprite n="CandleOn13.png" x="1" y="40" w="5" h="11" pX="0.5" pY="0.5"/>
+    <sprite n="CandleOn14.png" x="1" y="53" w="5" h="11" pX="0.5" pY="0.5"/>
+    <sprite n="CandleOn15.png" x="1" y="66" w="5" h="11" pX="0.5" pY="0.5"/>
+</TextureAtlas>

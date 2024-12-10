@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:27aeaf4b058c8a44ac98a5e6a0f15832:ceb2239d786492dd067825621cecbd3c:50a44f2ff6813333a8d20707d52c09fe$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="DoorClose.png" width="59" height="670">
+    <sprite n="Door0 #238838.png" x="1" y="1" w="57" h="65" pX="0.5" pY="0.5"/>
+    <sprite n="Door1 #232101.png" x="1" y="68" w="57" h="65" pX="0.5" pY="0.5"/>
+    <sprite n="Door2 #238691.png" x="1" y="135" w="57" h="65" pX="0.5" pY="0.5"/>
+    <sprite n="Door3 #230224.png" x="1" y="202" w="57" h="65" pX="0.5" pY="0.5"/>
+    <sprite n="Door4.png" x="1" y="269" w="57" h="65" pX="0.5" pY="0.5"/>
+    <sprite n="Door5 #234210.png" x="1" y="336" w="57" h="65" pX="0.5" pY="0.5"/>
+    <sprite n="Door6 #237976.png" x="1" y="403" w="57" h="65" pX="0.5" pY="0.5"/>
+    <sprite n="Door7 #238431.png" x="1" y="470" w="57" h="65" pX="0.5" pY="0.5"/>
+    <sprite n="Door8 #234964.png" x="1" y="537" w="57" h="65" pX="0.5" pY="0.5"/>
+    <sprite n="Door9 #232160.png" x="1" y="604" w="57" h="65" pX="0.5" pY="0.5"/>
+</TextureAtlas>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:63bd6b0914c8aab3c3628f929294062d:cdbbb024d1b3c9308ec4093848b5238a:ce6e7b479ca33659c86e36be8c8d87ae$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="SkelDogIdle.png" width="110" height="20">
+    <sprite n="SkelDogIdle0.png" x="1" y="1" w="20" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="SkelDogIdle1.png" x="23" y="1" w="20" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="SkelDogIdle2.png" x="45" y="1" w="20" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="SkelDogIdle3.png" x="67" y="1" w="20" h="18" pX="0.5" pY="0.5"/>
+    <sprite n="SkelDogIdle4.png" x="89" y="1" w="20" h="18" pX="0.5" pY="0.5"/>
+</TextureAtlas>

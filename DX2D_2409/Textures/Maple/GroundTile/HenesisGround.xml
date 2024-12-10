@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:acfae917ef40dcdaabf060c0ad90a88f:c478bc1b9f798105fa2b63369037c4c6:c68beda55cb111fde830db872f058c20$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="HenesisGround.png" width="1044" height="126">
+    <sprite n="grassySoil.img.bsc.0.png" x="553" y="1" w="90" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.bsc.1.png" x="645" y="1" w="90" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.bsc.2.png" x="737" y="1" w="90" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.bsc.3.png" x="829" y="1" w="90" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.bsc.4.png" x="921" y="1" w="90" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.bsc.5.png" x="553" y="63" w="90" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.edD.0.png" x="737" y="103" w="53" h="19" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.edD.1.png" x="792" y="105" w="53" h="19" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.edU.0.png" x="737" y="63" w="61" h="38" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.edU.1.png" x="800" y="63" w="58" h="40" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enH0.0.png" x="461" y="82" w="90" h="39" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enH0.1.png" x="185" y="82" w="90" h="40" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enH0.2.png" x="277" y="82" w="90" h="40" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enH0.3.png" x="369" y="82" w="90" h="40" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enH1.0.png" x="1" y="99" w="90" h="26" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enH1.1.png" x="645" y="63" w="90" h="27" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enH1.2.png" x="93" y="99" w="90" h="26" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enH1.3.png" x="645" y="92" w="90" h="27" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enV0.0.png" x="1013" y="1" w="30" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enV0.1.png" x="895" y="63" w="30" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enV0.2._outlink.png" x="860" y="63" w="33" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enV0.2.png" x="860" y="63" w="33" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enV1.0.png" x="927" y="63" w="30" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enV1.1.png" x="959" y="63" w="30" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.enV1.2.png" x="991" y="63" w="30" h="60" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.slLD.0.png" x="185" y="1" w="90" h="79" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.slLD.1.png" x="277" y="1" w="90" h="79" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.slLU.0.png" x="1" y="1" w="90" h="96" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.slRD.0.png" x="369" y="1" w="90" h="79" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.slRD.1.png" x="461" y="1" w="90" h="79" pX="0.5" pY="0.5"/>
+    <sprite n="grassySoil.img.slRU.0.png" x="93" y="1" w="90" h="96" pX="0.5" pY="0.5"/>
+</TextureAtlas>

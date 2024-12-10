@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:25093d8ddaca4aaa1ed24301636cfa9f:4ec713194fd434af5e98f7a6be84ec01:4d2e17f4ca91e707dbba89765ff80060$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="RedGiantBatIdle.png" width="61" height="221">
+    <sprite n="RedGiantBat0.png" x="1" y="1" w="59" h="21" pX="0.5" pY="0.5"/>
+    <sprite n="RedGiantBat1.png" x="1" y="24" w="59" h="21" pX="0.5" pY="0.5"/>
+    <sprite n="RedGiantBat2.png" x="1" y="47" w="58" h="28" pX="0.5" pY="0.5"/>
+    <sprite n="RedGiantBat3.png" x="1" y="77" w="56" h="31" pX="0.5" pY="0.5"/>
+    <sprite n="RedGiantBat4.png" x="1" y="110" w="51" h="36" pX="0.5" pY="0.5"/>
+    <sprite n="RedGiantBat5.png" x="1" y="148" w="49" h="36" pX="0.5" pY="0.5"/>
+    <sprite n="RedGiantBat6.png" x="1" y="186" w="57" h="34" pX="0.5" pY="0.5"/>
+</TextureAtlas>

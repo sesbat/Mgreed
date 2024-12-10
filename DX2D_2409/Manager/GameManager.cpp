@@ -1,18 +1,6 @@
 #include "Framework.h"
 
-//#include "Scenes/TutorialScene.h"
-#include "Scenes/ShootingScene.h"
-#include "Scenes/CollisionScene.h"
-#include "Scenes/TextureScene.h"
-#include "Scenes/AcadeScene.h"
-#include "Scenes/BreakOutScene.h"
-#include "Scenes/UIScene.h"
-#include "Scenes/AnimationScene.h"
-#include "Scenes/ShaderScene.h"
-#include "Scenes/SampleScene.h"
-#include "Scenes/RenderTargetScene.h"
-#include "Scenes/InstancingScene.h"
-#include "Scenes/TileMapScene.h"
+#include "Scenes/MapEditorScene.h"
 
 GameManager::GameManager()
 {
@@ -35,7 +23,7 @@ GameManager::GameManager()
     //SceneManager::Get()->Add("Start", new RenderTargetScene());
     //SceneManager::Get()->Add("Start", new InstancingScene());
     //SceneManager::Get()->Add("Start", new EditorScene());
-    SceneManager::Get()->Add("Start", new TileMapScene());
+    SceneManager::Get()->Add("Start", new MapEditorScene());
 
     SceneManager::Get()->ChangeScene("Start");
 }

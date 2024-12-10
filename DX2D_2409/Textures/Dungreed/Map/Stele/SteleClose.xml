@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:bf1c95d1804974024d804995d0de5fb5:2c11603592ce7fdd748d764b67fb0b95:f2181d615a704f45e1bad55db1bd0b16$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="SteleClose.png" width="612" height="22">
+    <sprite n="Stele00.png" x="1" y="1" w="66" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="Stele01.png" x="69" y="1" w="66" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="Stele02.png" x="137" y="1" w="66" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="Stele03.png" x="205" y="1" w="66" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="Stele04.png" x="273" y="1" w="66" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="Stele05.png" x="341" y="1" w="66" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="Stele06.png" x="409" y="1" w="66" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="Stele07.png" x="477" y="1" w="66" h="20" pX="0.5" pY="0.5"/>
+    <sprite n="Stele08.png" x="545" y="1" w="66" h="20" pX="0.5" pY="0.5"/>
+</TextureAtlas>
