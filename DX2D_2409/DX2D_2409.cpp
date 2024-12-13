@@ -10,6 +10,7 @@
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 HWND hWnd;
 Vector2 mousePos;
+Vector2 worldMousePos;
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
 
@@ -228,6 +229,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_MOUSEMOVE:
         mousePos.x = LOWORD(lParam);
         mousePos.y = SCREEN_HEIGHT - HIWORD(lParam);
+        worldMousePos = mousePos + CAM->GetPos();
         break;
     case WM_PAINT:
         {

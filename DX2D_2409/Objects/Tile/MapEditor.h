@@ -11,21 +11,37 @@ public:
     void Render();
     void Edit();
 
+    void Save(const string& filePath);
+    void Load(const string& filePath);
+
+    static Vector2 GetSelectFrame() { return selectFrame; }
+    Room* GetSelectedRoom() { return selectedRoom; }
 private:
-    Vector2 tileSize = { 50,50 };
+    void LoadTileQuads();
+
+    void AddNewMap(const string& mapName);
+    void DeleteSeletedMap();
+
+    void RenderMapSelection();
+    void RenderRoomSelection();
+    void RenderTileSelection();
+    void PlaceTile();
+private:
+    UINT roomWidth = 10, roomHeight = 10;
 
     vector<Map*> maps;              
     Map* selectedMap = nullptr;     
     Room* selectedRoom = nullptr;    
     Tile* selectedTile = nullptr;   
+    bool isDragging = false;
 
-    vector<SpriteData> tileSprites;  
-    Texture* tileTexture = nullptr;  
+    //instance
+    vector<EditTile*> editTiles;
+    vector<Quad*> editTileQuads;
 
-    int selectedTileIndex = -1;     
+    vector<Tile*> collisionTiles;
+    bool isCollisionTile = false;
 
-    void RenderMapSelection();
-    void RenderRoomSelection();
-    void RenderTileSelection();
-    void PlaceTile(int x, int y);
+    static Vector2 selectFrame;
+    int selectIndex = 0;
 };

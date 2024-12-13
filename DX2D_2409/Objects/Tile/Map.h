@@ -3,15 +3,17 @@
 class Map
 {
 public:
-    Map(string name, int roomWidth, int roomHeight, int numRooms, Quad* roomImage);
+    Map(string name);
     ~Map();
 
-    void Update();
-    void Render();
+    void AddRoom(Room* room);
+    void DeleteRoom(Room* room);
 
-    Room* GetRoom(int index);
-    const string& GetName() const { return name; }
-    vector<Room*> GetRooms() const { return rooms; }
+    const vector<Room*>& GetRooms() const { return rooms; }
+    string GetName() const { return name; }
+
+    void Save(BinaryWriter& writer);
+    void Load(BinaryReader& reader);
 private:
     string name;
     vector<Room*> rooms;

@@ -1,30 +1,15 @@
 #include "Framework.h"
 
 #include "Scenes/MapEditorScene.h"
+#include "Scenes/GameScene.h"
 #include "Scenes/SampleScene.h"
 
 GameManager::GameManager()
 {
     Init();
 
-    //scene = new TutorialScene();
-    //scene = new ShootingScene();
-    //scene = new CollisionScene();
-    //scene = new TextureScene();
-    //scene = new AcadeScene();
-    //scene = new BreakOutScene();
-    //scene = new UIScene();
-    //SceneManager::Get()->Add("Start", new UIScene());
-    //SceneManager::Get()->Add("Start", new ShootingScene());
-    //SceneManager::Get()->Add("Break", new BreakOutScene());
-    //SceneManager::Get()->Add("Start", new AcadeScene());   
-    //SceneManager::Get()->Add("Start", new AnimationScene());
-    //SceneManager::Get()->Add("Start", new ShaderScene());
-    //SceneManager::Get()->Add("Start", new SampleScene());
-    //SceneManager::Get()->Add("Start", new RenderTargetScene());
-    //SceneManager::Get()->Add("Start", new InstancingScene());
-    //SceneManager::Get()->Add("Start", new EditorScene());
     SceneManager::Get()->Add("Start", new MapEditorScene());
+    SceneManager::Get()->Add("Game", new GameScene());
 
     SceneManager::Get()->ChangeScene("Start");
 }

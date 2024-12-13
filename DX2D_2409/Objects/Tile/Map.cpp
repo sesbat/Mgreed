@@ -1,34 +1,62 @@
 #include "Framework.h"
 
-Map::Map(string name, int roomWidth, int roomHeight, int numRooms, Quad* roomImage)
-    :name(name)
+Map::Map(string name)
+	:name(name)
 {
-    for (int i = 0; i < numRooms; ++i)
-        rooms.push_back(new Room(roomWidth, roomHeight, roomImage));
 }
 
 Map::~Map()
 {
-    for (Room* room : rooms)
-        delete room;
-    rooms.clear();
+	for (Room* room : rooms)
+		delete room;
+	rooms.clear();
 }
 
-void Map::Update()
+void Map::AddRoom(Room* room)
 {
-    for (Room* room : rooms)
-        room->Update();
+    rooms.push_back(room);
 }
 
-void Map::Render()
+void Map::DeleteRoom(Room* room)
 {
-    for (Room* room : rooms)
-        room->Render();
+    auto it = std::find(rooms.begin(), rooms.end(), room);
+    if (it != rooms.end())
+    {
+        delete* it;
+        rooms.erase(it);
+    }
 }
 
-Room* Map::GetRoom(int index)
+void Map::Save(BinaryWriter& writer)
 {
-    if (index >= 0 && index < rooms.size())
-        return rooms[index];
-    return nullptr;
+    // Save map name
+    writer.String(name);
+
+    // Save room count
+    writer.UInt(rooms.size());
+
+    // Save each room
+    for (Room* room : rooms)
+        room->Save(writer);
+}
+
+void Map::Load(BinaryReader& reader)
+{
+    name = reader.String();
+
+    // Load room count
+    UINT roomCount = reader.UInt();
+
+    for (UINT i = 0; i < roomCount; ++i)
+    {
+        UINT roomWidth = reader.UInt();
+        UINT roomHeight = reader.UInt();
+        wstring roomBackGroundFile = reader.WString();
+
+        Quad* backGround = new Quad(roomBackGroundFile);
+        Room* room = new Room(roomWidth, roomHeight, backGround);
+        room->SetSize(roomWidth, roomHeight);
+        room->Load(reader);
+        rooms.push_back(room);
+    }
 }

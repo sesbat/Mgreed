@@ -34,9 +34,15 @@ struct Vector2 : public Float2
     {
         return Vector2(x / s, y / s);
     }
-    bool operator ==(const Vector2& v)
-    {
-        return x == v.x && y == v.y;
+    bool operator==(const Vector2& other) const {
+        return x == other.x && y == other.y;
+    }
+
+    bool operator!=(const Vector2& other) const {
+        return !(*this == other);
+    }
+    Vector2 Conditional(bool condition, const Vector2& trueValue, const Vector2& falseValue) {
+        return condition ? trueValue : falseValue;
     }
 
     void operator+=(const Vector2& v)

@@ -132,10 +132,6 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Objects/UI/Button.h"
 #include "Objects/UI/Slider.h"
 
-#include "Objects/Shooting/Bullet.h"
-#include "Objects/Shooting/BulletManager.h"
-#include "Objects/Shooting/Player.h"
-
 #include "Objects/Acade/Mario.h"
 #include "Objects/Acade/BrickManager.h"
 
@@ -158,8 +154,15 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Objects/Action/Boss/BossDie.h"
 #include "Objects/Action/Boss/BossMove.h"
 
+#include "Objects/Character/Character.h"
+#include "Objects/Character/Player.h"
+#include "Objects/Character/Action/Player/PlayerAction.h"
+#include "Objects/Character/Action/Player/PlayerMove.h"
+#include "Objects/Character/Action/Player/PlayerJump.h"
+
 #include "DataTables/FileData.h"
 #include "Objects/Tile/Tile.h"
+#include "Objects/Tile/EditTile.h"
 #include "Objects/Tile/Room.h"
 #include "Objects/Tile/Map.h"
 #include "Objects/Tile/TileLoader.h"
@@ -169,6 +172,7 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Scenes/Scene.h"
 #include "Manager/SceneManager.h"
 #include "Manager/GameManager.h"
+#include "Manager/MapManager.h"
 #include "Manager/CollisionManager.h"
 #include "Objects/SamplePlayer.h"
 
@@ -176,6 +180,7 @@ extern ID3D11Device* device;
 extern ID3D11DeviceContext* deviceContext;
 extern IDXGISwapChain* swapChain;
 extern Vector2 mousePos;
+extern Vector2 worldMousePos;
 extern HWND hWnd;
 
 
