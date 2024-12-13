@@ -1,5 +1,4 @@
 #include "Framework.h"
-#include "SampleScene.h"
 #include "rapidjson/document.h"
 using namespace rapidjson;
 
@@ -9,6 +8,7 @@ SampleScene::SampleScene()
     data = LoadFromJSON(L"DataTables/Json/sampleColData.json");
 
     back = new ImageObject(L"Textures/Acade/sampleBack.png");
+    back = new ImageObject(L"Textures/Sample/sampleBack.png");
     back->SetPos(Vector2(SCREEN_WIDTH/2, SCREEN_HEIGHT/2));
     back->Update();
 
@@ -25,6 +25,8 @@ SampleScene::SampleScene()
     }
 
     player = new SamplePlayer();
+    player->LoadFromJSON(L"DataTables/Json/Idle.json");
+    
 
     player->SetLandCollider(colCount, reinterpret_cast<BoxCollider**>(allCols));
 }

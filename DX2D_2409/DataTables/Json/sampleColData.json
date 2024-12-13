@@ -3,6 +3,7 @@
   "cols": [
     {
       "path": "Textures/Acade/Brick.png",
+      "path": "Textures/Sample/Brick.png",
       "startPos": {
         "x": 640,
         "y": 0
@@ -12,6 +13,7 @@
     },
     {
       "path": "Textures/Acade/Brick.png",
+      "path": "Textures/Sample/Brick.png",
       "startPos": {
         "x": 640,
         "y": 150
