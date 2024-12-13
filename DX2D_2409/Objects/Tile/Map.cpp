@@ -12,6 +12,18 @@ Map::~Map()
 	rooms.clear();
 }
 
+void Map::Update()
+{
+    for (Room* room : rooms)
+        room->Update();
+}
+
+void Map::Render()
+{
+    for (Room* room : rooms)
+        room->Render();
+}
+
 void Map::AddRoom(Room* room)
 {
     rooms.push_back(room);
@@ -19,7 +31,7 @@ void Map::AddRoom(Room* room)
 
 void Map::DeleteRoom(Room* room)
 {
-    auto it = std::find(rooms.begin(), rooms.end(), room);
+    auto it = find(rooms.begin(), rooms.end(), room);
     if (it != rooms.end())
     {
         delete* it;

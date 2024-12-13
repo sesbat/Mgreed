@@ -33,6 +33,8 @@ GameManager::~GameManager()
 
 void GameManager::Update()
 {
+    if (KEY->Down('R'))
+        SceneManager::Get()->ChangeScene("Game");
     Timer::Get()->Update();
     Keyboard::Get()->Update();
 

@@ -10,7 +10,8 @@ public:
 	void Render() override;
 	void PostRender() override;
 
+	void LoadGameMap(const string& fileName);
 private:
 	Player* player;
-	Room* room;
+	Map* curMap;
 };

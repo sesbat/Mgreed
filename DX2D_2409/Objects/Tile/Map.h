@@ -1,10 +1,13 @@
 #pragma once
 
-class Map
+class Map : public Transform
 {
 public:
     Map(string name);
     ~Map();
+
+    void Update();
+    void Render();
 
     void AddRoom(Room* room);
     void DeleteRoom(Room* room);

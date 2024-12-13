@@ -2,83 +2,69 @@
 
 MapManager* MapManager::instance = nullptr;
 
-MapManager::MapManager() {}
-
 MapManager::~MapManager()
 {
-    delete currentMap;
-    for (Map* map : savedMaps)
+    for (Map* map : maps)
         delete map;
 }
 
-void MapManager::SaveCurrentMap(const string& filePath)
+void MapManager::SaveAllMaps(const string& filePath)
 {
-    if (!currentMap)
-        return;
-
     BinaryWriter writer(filePath);
-    currentMap->Save(writer);
+    writer.UInt(maps.size());
+
+    for (Map* map : maps)
+        map->Save(writer);
 }
 
-void MapManager::LoadMap(const string& filePath)
+void MapManager::LoadAllMaps(const string& filePath)
 {
-    if (currentMap)
-    {
-        delete currentMap;
-        currentMap = nullptr;
-    }
-
     BinaryReader reader(filePath);
-    currentMap = new Map(filePath);
-    currentMap->Load(reader);
-}
 
-void MapManager::GenerateRandomMap(int roomCount, int minWidth, int maxWidth, int minHeight, int maxHeight)
-{
-    if (currentMap)
-        delete currentMap;
+    for (Map* map : maps)
+        delete map;
+    maps.clear();
 
-    currentMap = new Map("RandomMap");
-
-    for (int i = 0; i < roomCount; ++i)
+    UINT mapCount = reader.UInt();
+    for (UINT i = 0; i < mapCount; ++i)
     {
-        int width = rand() % (maxWidth - minWidth + 1) + minWidth;
-        int height = rand() % (maxHeight - minHeight + 1) + minHeight;
-
-        wstring backGroundFile = L"Textures/Maple/Background/Henesis.png";
-        Room* room = new Room(width, height, new Quad(backGroundFile));
-        currentMap->AddRoom(room);
-
-        randomRooms.push_back(room);
+        Map* map = new Map(filePath);
+        map->Load(reader);
+        maps.push_back(map);
     }
+
+    if (!maps.empty())
+        selectedMap = maps.front();
 }
 
-void MapManager::SetCurrentMap(Map* map)
+Map* MapManager::CreateNewMap(const string& name)
 {
-    if (currentMap)
-        delete currentMap;
-
-    currentMap = map;
+    Map* newMap = new Map(name);
+    maps.push_back(newMap);
+    return newMap;
 }
 
-void MapManager::AddRoomToMap(int width, int height, const wstring& backGroundFile)
+void MapManager::DeleteMap(Map* map)
 {
-    if (!currentMap)
-        return;
+    auto it = std::find(maps.begin(), maps.end(), map);
+    if (it != maps.end())
+    {
+        delete* it;
+        maps.erase(it);
+    }
 
-    Room* newRoom = new Room(width, height, new Quad(backGroundFile));
-    currentMap->AddRoom(newRoom);
+    if (!maps.empty())
+        selectedMap = maps.front();
+    else
+        selectedMap = nullptr;
 }
 
-Room* MapManager::GetNextRoom()
+Map* MapManager::GetMapByName(const string& name)
 {
-    if (randomRooms.empty())
-        return nullptr;
-
-    int randomIndex = rand() % randomRooms.size();
-    Room* nextRoom = randomRooms[randomIndex];
-
-    // 이미 사용된 방은 제거 (선택적)
-    //randomRooms.erase(randomRooms.begin() + randomIndex);
-    return nextRoom;
+    for (Map* map : maps)
+    {
+        if (map->GetName() == name)
+            return map;
+    }
+    return nullptr;
 }

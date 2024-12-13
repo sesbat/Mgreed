@@ -3,24 +3,22 @@
 class MapManager : public Singleton<MapManager>
 {
 public:
-    void SaveCurrentMap(const string& filePath);
-    void LoadMap(const string& filePath);
+    friend Singleton;
+    void SaveAllMaps(const string& filePath);
+    void LoadAllMaps(const string& filePath);
 
-    void GenerateRandomMap(int roomCount, int minWidth, int maxWidth, int minHeight, int maxHeight);
-    Map* GetCurrentMap() const { return currentMap; }
-    void SetCurrentMap(Map* map);
+    Map* CreateNewMap(const string& name);
+    void DeleteMap(Map* map);
 
-    void AddRoomToMap(int width, int height, const wstring& backGroundFile);
+    const vector<Map*>& GetMaps() const { return maps; }
+    Map* GetMapByName(const string& name);
+    void SetSelectedMap(Map* map) { selectedMap = map; }
+    Map* GetSelectedMap() const { return selectedMap; }
 
-    Room* GetNextRoom();
 private:
-    MapManager();
+    MapManager() {}
     ~MapManager();
 
-private:
-    static MapManager* instance;
-    Map* currentMap = nullptr;
-
-    vector<Map*> savedMaps;
-    vector<Room*> randomRooms; 
+    vector<Map*> maps;
+    Map* selectedMap = nullptr;
 };

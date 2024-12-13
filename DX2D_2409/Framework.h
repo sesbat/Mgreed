@@ -171,8 +171,8 @@ typedef function<void(void*)> ObjectParamEvent;
 //Manager Header
 #include "Scenes/Scene.h"
 #include "Manager/SceneManager.h"
-#include "Manager/GameManager.h"
 #include "Manager/MapManager.h"
+#include "Manager/GameManager.h"
 #include "Manager/CollisionManager.h"
 #include "Objects/SamplePlayer.h"
 

@@ -4,28 +4,34 @@
 GameScene::GameScene()
 {
 	player = new Player();
-	room = nullptr;
+	LoadGameMap("map_data.bin");
 }
 
 GameScene::~GameScene()
 {
-	delete room;
 	delete player;
+	delete curMap;
 }
 
 void GameScene::Update()
 {
-	room->Update();
+	curMap->Update();
 	player->Update();
 }
 
 void GameScene::Render()
 {
-	room->Render();
+	curMap->Render();
 	player->Render();
 }
 
 void GameScene::PostRender()
 {
 
+}
+
+void GameScene::LoadGameMap(const string& fileName)
+{
+	MapManager::Get()->LoadAllMaps(fileName);
+	curMap = MapManager::Get()->GetSelectedMap();
 }

@@ -45,37 +45,19 @@ void MapEditor::Edit()
 	RenderRoomSelection();
 	RenderTileSelection();
 
-	// File Name Input
 	static char fileName[128] = "map_data.bin";
 	ImGui::InputText("File Name", fileName, IM_ARRAYSIZE(fileName));
 
-	// Save Map Button
-	if (ImGui::Button("Save Map"))
+	if (ImGui::Button("Save All Maps"))
 	{
-		Save(fileName);
-		cout << "Map saved to " << fileName << endl;
+		MapManager::Get()->SaveAllMaps(fileName);
+		cout << "All maps saved to " << fileName << endl;
 	}
 
-	// Load Map Button
-	if (ImGui::Button("Load Map"))
+	if (ImGui::Button("Load All Maps"))
 	{
-		Load(fileName);
-		cout << "Map loaded from " << fileName << endl;
-	}
-
-	// Add a new map
-	static char newMapName[128] = "NewMap";
-	ImGui::InputText("New Map Name", newMapName, IM_ARRAYSIZE(newMapName));
-
-	if (ImGui::Button("Add New Map"))
-	{
-		AddNewMap(newMapName);
-	}
-
-	// Delete selected map
-	if (ImGui::Button("Delete Selected Map"))
-	{
-		DeleteSeletedMap();
+		MapManager::Get()->LoadAllMaps(fileName);
+		cout << "All maps loaded from " << fileName << endl;
 	}
 }
 
@@ -171,8 +153,6 @@ void MapEditor::DeleteSeletedMap()
 
 		if (!maps.empty())
 			selectedMap = maps.front();
-
-		cout << "Deleted selected map." << endl;
 	}
 }
 
@@ -180,12 +160,33 @@ void MapEditor::RenderMapSelection()
 {
 	if (ImGui::TreeNode("Select Map"))
 	{
+		const vector<Map*>& maps = MapManager::Get()->GetMaps();
 		for (size_t i = 0; i < maps.size(); ++i)
 		{
-			if (ImGui::Selectable(maps[i]->GetName().c_str(), maps[i] == selectedMap))
+			if (ImGui::Selectable(maps[i]->GetName().c_str(), maps[i] == MapManager::Get()->GetSelectedMap()))
 			{
+				MapManager::Get()->SetSelectedMap(maps[i]);
 				selectedMap = maps[i];
-				cout << "Selected map: " << selectedMap->GetName() << endl;
+				selectedRoom = nullptr;
+			}
+		}
+
+		static char newMapName[128] = "NewMap";
+		ImGui::InputText("New Map Name", newMapName, IM_ARRAYSIZE(newMapName));
+
+		if (ImGui::Button("Add New Map"))
+		{
+			selectedMap = MapManager::Get()->CreateNewMap(newMapName);
+			selectedRoom = nullptr;
+		}
+
+		if (ImGui::Button("Delete Selected Map"))
+		{
+			if (selectedMap)
+			{
+				MapManager::Get()->DeleteMap(selectedMap);
+				selectedMap = MapManager::Get()->GetSelectedMap();
+				selectedRoom = nullptr;
 			}
 		}
 		ImGui::TreePop();
