@@ -43,6 +43,6 @@ private:
 
     bool IsSeperate(const Vector2& seperateAxis, const ObbDesc& box1, const ObbDesc& box2);
 
-private:
+protected:
     Vector2 size;
 };

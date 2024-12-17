@@ -2,8 +2,17 @@
 
 Mesh::~Mesh()
 {
-    vertexBuffer->Release();
-    indexBuffer->Release();
+    if (vertexBuffer) 
+    {
+        vertexBuffer->Release();
+        vertexBuffer = nullptr;
+    }
+
+    if (indexBuffer) 
+    {
+        indexBuffer->Release();
+        indexBuffer = nullptr;
+    }
 }
 
 void Mesh::Draw(D3D11_PRIMITIVE_TOPOLOGY type)

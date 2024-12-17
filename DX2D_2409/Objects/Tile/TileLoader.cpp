@@ -11,14 +11,12 @@ void TileLoader::LoadXML(const string& filePath)
     XMLError result = doc.LoadFile(filePath.c_str());
     if (result != XML_SUCCESS)
     {
-        cerr << "Failed to load XML: " << doc.ErrorStr() << endl;
         return;
     }
 
     XMLElement* root = doc.FirstChildElement("TextureAtlas");
     if (!root)
     {
-        cerr << "TextureAtlas not found in XML!" << endl;
         return;
     }
 

@@ -31,14 +31,14 @@ void Action::Start()
     clips[curState]->Play();
 }
 
-void Action::LoadClip(string path, string file, bool isLoop, float speed)
+void Action::LoadClip(string path, string file, bool isLoop, float speed, Vector2 offset)
 {
     tinyxml2::XMLDocument* document = new tinyxml2::XMLDocument();
     document->LoadFile((path + file).c_str());
 
     tinyxml2::XMLElement* atlas = document->FirstChildElement();
     string textureFile = path + atlas->Attribute("imagePath");
-
+    
     vector<Frame*> frames;
     tinyxml2::XMLElement* sprite = atlas->FirstChildElement();
 
@@ -50,7 +50,7 @@ void Action::LoadClip(string path, string file, bool isLoop, float speed)
         w = sprite->FloatAttribute("w");
         h = sprite->FloatAttribute("h");
 
-        frames.push_back(new Frame(Utility::ToWString(textureFile), x, y, w, h));
+        frames.push_back(new Frame(Utility::ToWString(textureFile), x, y, w, h, offset));
 
         sprite = sprite->NextSiblingElement();
     }

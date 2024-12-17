@@ -3,20 +3,25 @@
 PlayerJump::PlayerJump(Player* player)
 	:PlayerMove(player)
 {
-    LoadClip("Textures/Maple/DefaultCharacter/Jump/", "JumpStart.xml", false);
-    LoadClip("Textures/Maple/DefaultCharacter/Jump/", "Jumping.xml", true);
-    LoadClip("Textures/Maple/DefaultCharacter/Jump/", "JumpEnd.xml", false);
+    LoadClip("Textures/Dungreed/Character/Jump/", "JumpStart.xml", false);
+    LoadClip("Textures/Dungreed/Character/Jump/", "Jumping.xml", true);
+    LoadClip("Textures/Dungreed/Character/Jump/", "JumpEnd.xml", false);
 
     clips[START]->SetEvent(bind(&PlayerJump::EndJumpStart, this));
-    clips[END]->SetEvent(bind(&Player::OnGround, player));
+    clips[END]->SetEvent(bind(&Player::Land, player));
 }
 
 void PlayerJump::Update()
 {
     Loop();
 
-    if (curState != END)
-        player->Gravity();
+    /*if (curState != END)
+        player->Gravity();*/
+    if (curState != START && KEY->Down('W'))
+    {
+        SetState(START);
+        player->SetVelocityY(JUMP_POWER);
+    }
 
     PlayerMove::Update();
 }
@@ -32,6 +37,8 @@ void PlayerJump::Loop()
 {
     if (curState != LOOP) return;
 
+    if (player->IsGround())
+        SetState(END);
 }
 
 void PlayerJump::EndJumpStart()

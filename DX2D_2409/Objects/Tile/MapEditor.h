@@ -3,6 +3,11 @@
 
 class MapEditor : public Transform
 {
+private:
+    enum Mode
+    {
+        INSERT,REMOVE
+    };
 public:
     MapEditor();
     ~MapEditor();
@@ -22,6 +27,7 @@ private:
     void AddNewMap(const string& mapName);
     void DeleteSeletedMap();
 
+    void RenderMode();
     void RenderMapSelection();
     void RenderRoomSelection();
     void RenderTileSelection();
@@ -32,14 +38,18 @@ private:
     vector<Map*> maps;              
     Map* selectedMap = nullptr;     
     Room* selectedRoom = nullptr;    
-    Tile* selectedTile = nullptr;   
+    Tile* selectedTile = nullptr;
+    //Quad* selectBackGroundObject = nullptr;
     bool isDragging = false;
 
+    Mode mode = INSERT;
     //instance
     vector<EditTile*> editTiles;
     vector<Quad*> editTileQuads;
+    //vector<Quad*> backgroundObjectQuads;
 
-    vector<Tile*> collisionTiles;
+    vector<Tile*> tiles;
+    vector<Tile*> objectTiles;
     bool isCollisionTile = false;
 
     static Vector2 selectFrame;

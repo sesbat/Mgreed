@@ -27,7 +27,6 @@ public:
     void EndDie();
 
     void Move();
-    void Gravity() override;
     void Damage();
     void CreateActions();
 private:

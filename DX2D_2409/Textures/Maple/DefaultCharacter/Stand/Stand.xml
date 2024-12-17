@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:00224abbc87fa859c1e4ebd7e88172ee:adb692ddb692c54198004a5a9f08cfea:d9406641606268b252782fd3852bb506$ -->
+<!-- $TexturePacker:SmartUpdate:5bd8ee1e193a9a00ea618cc5c17a3a77:2a013a631954daa9b9d4c9c7794efd91:d9406641606268b252782fd3852bb506$ -->
 <!--Format:
 n  => name of the sprite
 x  => sprite x pos in texture
@@ -19,8 +19,8 @@ vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
 verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
 triangles  => sprite triangulation, 3 vertex indices per triangle
 -->
-<TextureAtlas imagePath="Stand.png" width="438" height="97">
-    <sprite n="avatar_stand1(0)_default(0).png" x="1" y="1" w="142" h="95" pX="0.5" pY="0.5"/>
-    <sprite n="avatar_stand1(1)_default(0).png" x="145" y="1" w="145" h="94" pX="0.5" pY="0.5"/>
-    <sprite n="avatar_stand1(2)_default(0).png" x="292" y="1" w="145" h="93" pX="0.5" pY="0.5"/>
+<TextureAtlas imagePath="Stand.png" width="438" height="95">
+    <sprite n="avatar_stand1_default-Sheet1.png" x="0" y="0" w="146" h="95" pX="0.5" pY="0.5"/>
+    <sprite n="avatar_stand1_default-Sheet2.png" x="146" y="0" w="146" h="95" pX="0.5" pY="0.5"/>
+    <sprite n="avatar_stand1_default-Sheet3.png" x="292" y="0" w="146" h="95" pX="0.5" pY="0.5"/>
 </TextureAtlas>

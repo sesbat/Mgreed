@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:cbf961cb4eea555efc5aaa0915fbba09:f5f2eefad24ac73e65ab94f1cc992161:c785b4273239e28e744ba35e32e04c8d$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="Tiles.png" width="1836" height="18">
+    <sprite n="1FloorTileLeft.png" x="1" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="1FloorTileMiddle.png" x="19" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="1FloorTileRight.png" x="37" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H00.png" x="55" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H00_1.png" x="73" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H01.png" x="91" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H02.png" x="109" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H02_1.png" x="127" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H03.png" x="145" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H03_1.png" x="163" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H04.png" x="181" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H05.png" x="199" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H05_1.png" x="217" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H06.png" x="235" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H07.png" x="253" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H08.png" x="271" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H09.png" x="289" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H10.png" x="307" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H11.png" x="325" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H12.png" x="343" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H13.png" x="361" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H14.png" x="379" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H15.png" x="397" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_H16.png" x="415" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_HStairL.png" x="433" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_HStairL2.png" x="451" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_HStairR.png" x="469" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_HStairR2.png" x="487" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_Oneway0.png" x="505" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_Oneway1.png" x="523" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="DarkTile_Oneway2.png" x="541" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="HivePlarformTile_0.png" x="559" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H0.png" x="577" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H1.png" x="595" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H2.png" x="721" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H3.png" x="739" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H4.png" x="181" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H5.png" x="757" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H6.png" x="775" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H7.png" x="793" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H8.png" x="811" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H9.png" x="829" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H10.png" x="613" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H11.png" x="631" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H12.png" x="649" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H13.png" x="667" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H14.png" x="685" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_H15.png" x="703" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Marble_Stair_BottomLeft.png" x="847" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Marble_Stair_BottomRight.png" x="865" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Marble_Stair_TopLeft.png" x="883" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Marble_Stair_TopRight.png" x="901" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Marble_Top.png" x="919" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_Bottom.png" x="937" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_BottomCenter.png" x="955" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_BottomLeft.png" x="973" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_BottomRight.png" x="991" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_Left.png" x="1009" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_MiddleLeft.png" x="1027" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_MiddleRight.png" x="1045" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_Right.png" x="1063" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_Top.png" x="1081" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_TopCenter.png" x="955" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_TopLeft.png" x="1099" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Slim_TopRight.png" x="1117" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Stair_BottomLeft.png" x="1135" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Stair_BottomRight.png" x="1153" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Stair_TopLeft.png" x="1171" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Tile_Stair_TopRight.png" x="1189" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Vertical1TileBottom.png" x="1207" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Vertical1TileMiddle.png" x="1225" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="Vertical1TileTop.png" x="1243" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_0.png" x="1261" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_1.png" x="1279" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_2.png" x="1351" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_3.png" x="1369" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_4.png" x="181" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_5.png" x="1387" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_6.png" x="1405" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_7.png" x="1423" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_8.png" x="1441" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_9.png" x="1459" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_10.png" x="1297" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_11.png" x="1315" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_12.png" x="1333" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_Stair0.png" x="1477" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_Stair1.png" x="1495" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_Stair2.png" x="1513" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchBrickTile_Stair3.png" x="1531" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_0.png" x="1549" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_1.png" x="1567" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_2.png" x="1639" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_3.png" x="1657" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_4.png" x="181" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_5.png" x="1675" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_6.png" x="1693" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_7.png" x="1711" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_8.png" x="1729" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_9.png" x="1747" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_10.png" x="1585" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_11.png" x="1603" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_12.png" x="1621" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_Stair0.png" x="1765" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_Stair1.png" x="1783" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_Stair2.png" x="1801" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+    <sprite n="WitchTile_Stair3.png" x="1819" y="1" w="16" h="16" pX="0.5" pY="0.5"/>
+</TextureAtlas>

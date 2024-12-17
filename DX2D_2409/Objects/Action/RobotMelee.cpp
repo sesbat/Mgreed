@@ -9,7 +9,8 @@ RobotMelee::RobotMelee(Robot* robot) : RobotAction(robot)
     attackCollider->SetActive(false);
 
     LoadClip("Textures/Robot/", "Robot_Melee.xml", false);
-    clips[0]->SetEvent(bind(&Robot::EndAttack, robot));
+    clips[0]->
+        (bind(&Robot::EndAttack, robot));
     clips[0]->SetEvent(bind(&RobotMelee::OnActiveCollider, this), 2);
     clips[0]->SetEvent(bind(&RobotMelee::OnInactiveCollider, this), 5);
 }

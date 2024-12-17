@@ -11,7 +11,7 @@ MapEditor::MapEditor()
 	LoadTileQuads();
 	//EventManager::Get()->AddEvent("UpdateInstance", bind(&MapEditor::UpdateInstanceData, this));
 
-	Quad* image = new Quad(L"Textures/Maple/Background/Henesis.png");
+	//Quad* image = new Quad(L"Textures/Maple/Background/Henesis.png");
 }
 
 MapEditor::~MapEditor()
@@ -25,9 +25,12 @@ void MapEditor::Update()
 {
 	if (selectedRoom)
 	{
-		selectedRoom->Update();
-		if(KEY->Press(VK_LBUTTON))
+		
+		if (KEY->Press(VK_LBUTTON))
+		{
 			PlaceTile();
+			//selectedRoom->Update();
+		}
 	}
 }
 
@@ -44,6 +47,7 @@ void MapEditor::Edit()
 	RenderMapSelection();
 	RenderRoomSelection();
 	RenderTileSelection();
+	RenderMode();
 
 	static char fileName[128] = "map_data.bin";
 	ImGui::InputText("File Name", fileName, IM_ARRAYSIZE(fileName));
@@ -51,13 +55,11 @@ void MapEditor::Edit()
 	if (ImGui::Button("Save All Maps"))
 	{
 		MapManager::Get()->SaveAllMaps(fileName);
-		cout << "All maps saved to " << fileName << endl;
 	}
 
 	if (ImGui::Button("Load All Maps"))
 	{
 		MapManager::Get()->LoadAllMaps(fileName);
-		cout << "All maps loaded from " << fileName << endl;
 	}
 }
 
@@ -103,9 +105,9 @@ void MapEditor::LoadTileQuads()
 {
 	WIN32_FIND_DATA findData;
 
-	HANDLE handle = FindFirstFile(L"Textures/Tile/Ground/*.png", &findData);
+	HANDLE handle = FindFirstFile(L"Textures/Dungreed/Tiles/BackGroundTile/*.png", &findData);
 	bool result = true;
-	wstring path = L"Textures/Tile/Ground/";
+	wstring path = L"Textures/Dungreed/Tiles/BackGroundTile/";
 
 	while (result)
 	{
@@ -117,26 +119,37 @@ void MapEditor::LoadTileQuads()
 		result = FindNextFile(handle, &findData);
 	}
 
-	handle = FindFirstFile(L"Textures/Tile/Collision/*.png", &findData);
+	handle = FindFirstFile(L"Textures/Dungreed/Tiles/Collision/*.png", &findData);
 	result = true;
-	path = L"Textures/Tile/Collision/";
+	path = L"Textures/Dungreed/Tiles/Collision/";
 	while (result)
 	{
 		//Texture* texture = Texture::Add(path + findData.cFileName);
 		Tile* tile = new Tile(path + findData.cFileName);
 
-		collisionTiles.push_back(tile);
+		tiles.push_back(tile);
 
 		result = FindNextFile(handle, &findData);
 	}
+
+	//handle = FindFirstFile(L"Textures/Dungreed/Tiles/BackGroundObject/*.png", &findData);
+	//result = true;
+	//path = L"Textures/Dungreed/Tiles/BackGroundObject/";
+	//while (result)
+	//{
+	//	//Texture* texture = Texture::Add(path + findData.cFileName);
+	//	Quad* tile = new Quad(path + findData.cFileName);
+
+	//	backgroundObjectQuads.push_back(tile);
+
+	//	result = FindNextFile(handle, &findData);
+	//}
 }
 
 void MapEditor::AddNewMap(const string& mapName)
 {
 	Map* newMap = new Map(mapName);
 	maps.push_back(newMap);
-
-	cout << "Added new map: " << mapName << endl;
 }
 
 void MapEditor::DeleteSeletedMap()
@@ -153,6 +166,24 @@ void MapEditor::DeleteSeletedMap()
 
 		if (!maps.empty())
 			selectedMap = maps.front();
+	}
+}
+
+void MapEditor::RenderMode()
+{
+	if (ImGui::TreeNode("Select Mode"))
+	{
+		if (ImGui::Button("Insert"))
+		{
+			mode = INSERT;
+		}
+
+		if (ImGui::Button("Remove"))
+		{
+			mode = REMOVE;
+		}
+		ImGui::NewLine();
+		ImGui::TreePop();
 	}
 }
 
@@ -207,21 +238,20 @@ void MapEditor::RenderRoomSelection()
 			string roomLabel = "Room " + to_string(i + 1);
 			if (ImGui::Selectable(roomLabel.c_str(), rooms[i] == selectedRoom))
 			{
+				MapManager::Get()->GetSelectedMap()->SetCurrentRoom(rooms[i]);
 				selectedRoom = rooms[i];
-				cout << "Selected room: " << roomLabel << endl;
 			}
 		}
 
-		static int newRoomWidth = 10;
-		static int newRoomHeight = 10;
+		static int newRoomWidth = 60;
+		static int newRoomHeight = 25;
 
 		ImGui::InputInt("New Room Width", &newRoomWidth);
 		ImGui::InputInt("New Room Height", &newRoomHeight);
 
 		if (ImGui::Button("Add New Room"))
 		{
-			selectedMap->AddRoom(new Room(newRoomWidth, newRoomHeight, new Quad(L"Textures/Maple/Background/Henesis.png")));
-			cout << "Added a new room to the map." << endl;
+			selectedMap->AddRoom(new Room(newRoomWidth, newRoomHeight, new Quad(L"Textures/DunGreed/Tiles/BackGround/Sky_Day.png")));
 		}
 
 		if (ImGui::Button("Delete Selected Room"))
@@ -230,7 +260,6 @@ void MapEditor::RenderRoomSelection()
 			{
 				selectedMap->DeleteRoom(selectedRoom);
 				selectedRoom = nullptr;
-				cout << "Deleted selected room." << endl;
 			}
 		}
 
@@ -242,25 +271,24 @@ void MapEditor::RenderTileSelection()
 {
 	if (!selectedRoom)
 		return;
-
 	UINT width = 5;
 	if (ImGui::TreeNode("BackGroundTile"))
 	{
 		int count = 0;
 
-		Vector2 startFrame = { 10, 6 };
+		Vector2 startFrame = { 0, 0 };
 
 		for (Quad* quad : editTileQuads)
 		{
-			string key = "BackGround" + to_string(count);
+			string key = "BackGround Tiles" + to_string(count);
 			if (ImGui::ImageButton(key.c_str(),
 				(ImTextureID)quad->GetMaterial()->GetTexture()->GetSRV(), ImVec2(50, 50)))
 			{
-				int x = count % 3;
-				int y = count / 3;
+				mode = INSERT;
+				int x = count % 38;
 				selectIndex = count;
 				isCollisionTile = false;
-				selectFrame = startFrame + Vector2(x, y);
+				selectFrame = startFrame + Vector2(x, 0);
 			}
 
 			count++;
@@ -273,11 +301,12 @@ void MapEditor::RenderTileSelection()
 	}
 	if (ImGui::TreeNode("Collision Tiles"))
 	{
-		for (size_t i = 0; i < collisionTiles.size(); ++i)
+		for (size_t i = 0; i < tiles.size(); ++i)
 		{
 			if (ImGui::ImageButton(("Collision " + to_string(i)).c_str(),
-				(ImTextureID)collisionTiles[i]->GetImage()->GetMaterial()->GetTexture()->GetSRV(), ImVec2(50, 50)))
+				(ImTextureID)tiles[i]->GetImage()->GetMaterial()->GetTexture()->GetSRV(), ImVec2(50, 50)))
 			{
+				mode = INSERT;
 				selectIndex = i;
 				isCollisionTile = true;
 			}
@@ -299,15 +328,30 @@ void MapEditor::PlaceTile()
 	int x = static_cast<int>(localMousePos.x / tileSize.x);
 	int y = static_cast<int>(localMousePos.y / tileSize.y);
 
-	if (x < 0 || x >= selectedRoom->GetWidth() || y < 0 || y >= selectedRoom->GetHeight())
-		return;
+	Tile* tile = nullptr;
 
-	if (isCollisionTile)
+	if (mode == INSERT)
 	{
-		selectedRoom->SetCollisionTile(x, y, collisionTiles[selectIndex]->GetImage()->GetMaterial()->GetTexture()->GetFile());
+		if (isCollisionTile)
+		{
+			/*switch (tiles[selectIndex]->GetType())
+			{
+			case Tile::COLLISION:
+				tile = new CollisionTile(tiles[selectIndex]->GetImage()->GetMaterial()->GetTexture()->GetFile());
+				break;
+			case Tile::OBJECT:
+				tile = new ObjectTile(tiles[selectIndex]->GetImage()->GetMaterial()->GetTexture()->GetFile());
+				break;
+			}*/
+			selectedRoom->SetCollisionTile(x, y, tiles[selectIndex]->GetImage()->GetMaterial()->GetTexture()->GetFile());
+		}
+		else
+		{
+			selectedRoom->SetEditTile(x, y, selectFrame);
+		}
 	}
-	else
+	else if (mode == REMOVE)
 	{
-		selectedRoom->SetEditTile(x, y, selectFrame);
+		selectedRoom->RemoveTile(x, y);
 	}
 }

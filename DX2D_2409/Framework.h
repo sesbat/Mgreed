@@ -6,8 +6,8 @@
 #define WIN_START_X 0
 #define WIN_START_Y 0
 
-#define SCREEN_WIDTH 1280
-#define SCREEN_HEIGHT 720
+#define SCREEN_WIDTH 640
+#define SCREEN_HEIGHT 360
 
 #define CENTER_X SCREEN_WIDTH * 0.5f
 #define CENTER_Y SCREEN_HEIGHT * 0.5f
@@ -22,6 +22,7 @@
 #define KEY Keyboard::Get()
 #define FONT Font::Get()
 #define CAM Environment::Get()->GetMainCamera()
+#define PLAYER PlayerManager::Get()->GetPlayer()
 
 #include <windows.h>
 #include <string>
@@ -132,9 +133,6 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Objects/UI/Button.h"
 #include "Objects/UI/Slider.h"
 
-#include "Objects/Acade/Mario.h"
-#include "Objects/Acade/BrickManager.h"
-
 #include "Objects/Inventory/Item.h"
 #include "Objects/Inventory/Store.h"
 #include "Objects/Inventory/Inventory.h"
@@ -154,27 +152,44 @@ typedef function<void(void*)> ObjectParamEvent;
 #include "Objects/Action/Boss/BossDie.h"
 #include "Objects/Action/Boss/BossMove.h"
 
-#include "Objects/Character/Character.h"
-#include "Objects/Character/Player.h"
-#include "Objects/Character/Action/Player/PlayerAction.h"
-#include "Objects/Character/Action/Player/PlayerMove.h"
-#include "Objects/Character/Action/Player/PlayerJump.h"
-
 #include "DataTables/FileData.h"
 #include "Objects/Tile/Tile.h"
+#include "Objects/Tile/CollisionTile.h"
+#include "Objects/Tile/ObjectTile.h"
 #include "Objects/Tile/EditTile.h"
 #include "Objects/Tile/Room.h"
 #include "Objects/Tile/Map.h"
 #include "Objects/Tile/TileLoader.h"
 #include "Objects/Tile/MapEditor.h"
 
+#include "Objects/Weapon/Weapon.h"
+#include "Objects/Weapon/MeleeWeapon.h"
+#include "Objects/Weapon/GreatSword.h"
+
+#include "Objects/Weapon/RangeWeapon.h"
+
+#include "Objects/DropObject/DropObject.h"
+#include "Objects/DropObject/Coin.h"
+#include "Objects/DropObject/AED.h"
+#include "Objects/DropObject/GoldBar.h"
+
+#include "Objects/BreakObject/BreakObject.h"
+
+#include "Objects/Character/Character.h"
+#include "Objects/Character/Player.h"
+#include "Objects/Character/Action/Player/PlayerAction.h"
+#include "Objects/Character/Action/Player/PlayerMove.h"
+#include "Objects/Character/Action/Player/PlayerJump.h"
+#include "Objects/Character/Action/Player/PlayerRun.h"
+#include "Objects/Character/Action/Player/PlayerDash.h"
+
 //Manager Header
+#include "Manager/MapManager.h"
+#include "Manager/PlayerManager.h"
+#include "Manager/CollisionManager.h"
 #include "Scenes/Scene.h"
 #include "Manager/SceneManager.h"
-#include "Manager/MapManager.h"
 #include "Manager/GameManager.h"
-#include "Manager/CollisionManager.h"
-#include "Objects/SamplePlayer.h"
 
 extern ID3D11Device* device;
 extern ID3D11DeviceContext* deviceContext;

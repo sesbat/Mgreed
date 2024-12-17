@@ -56,8 +56,8 @@ void SceneManager::ChangeScene(string key)
     if (scenes.count(key) == 0)
         assert(false);
 
-    if(scenes[key] == curScene)
-        assert(false);
+    if (scenes[key] == curScene)
+        return;
 
     if (curScene != nullptr)
         curScene->End();

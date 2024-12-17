@@ -229,7 +229,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_MOUSEMOVE:
         mousePos.x = LOWORD(lParam);
         mousePos.y = SCREEN_HEIGHT - HIWORD(lParam);
-        worldMousePos = mousePos + CAM->GetPos();
+        worldMousePos = CAM->ScreenToWorld(mousePos);
         break;
     case WM_PAINT:
         {

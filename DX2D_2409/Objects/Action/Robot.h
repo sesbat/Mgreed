@@ -4,7 +4,7 @@ class Boss;
 class Robot : public RigidbodyObject
 {
 private:
-    enum ActionState
+    enum RobotActionState
     {
         IDLE, RUN, MELEE, SHOOT, JUMP , DIE,
     };
@@ -19,7 +19,6 @@ public:
     void Land();
     void EndAttack();
     void EndDie();
-    void Gravity() override;
     void Damage();
 
     void SetBoss(Boss* boss) { this->boss = boss; }
@@ -35,13 +34,13 @@ private:
    
     //void Animation();
     
-    void SetActionState(ActionState state); 
+    void SetActionState(RobotActionState state);
 
     void CreateActions();
 
 private:    
-    ActionState curState = IDLE;
-    map<ActionState, Action*> actions;
+    RobotActionState curState = IDLE;
+    map<RobotActionState, Action*> actions;
 
     int hp = 5;
     Slider* hpBar;

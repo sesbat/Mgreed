@@ -80,34 +80,12 @@ void Camera::FollowMode()
     pos = target->GetGlobalPos() - CENTER;
 }
 
-Vector2 Camera::ScreenToWorld(Vector2 screenPos)
+Vector2 Camera::ScreenToWorld(const Vector2& screenPos)
 {
-    Vector2 normalizedScreenPos;
-    normalizedScreenPos.x = (screenPos.x / SCREEN_WIDTH) * 2.0f - 1.0f;
-    normalizedScreenPos.y = 1.0f - (screenPos.y / SCREEN_HEIGHT) * 2.0f; 
-
-    Matrix invViewProjection = XMMatrixInverse(nullptr, view * viewProjection.projection);
-
-    XMFLOAT4 clipSpacePos(normalizedScreenPos.x, normalizedScreenPos.y, 0.0f, 1.0f);
-
-    XMVECTOR clipVector = XMLoadFloat4(&clipSpacePos);
-    XMVECTOR worldVector = XMVector4Transform(clipVector, invViewProjection);
-
-    XMFLOAT4 worldPos;
-    XMStoreFloat4(&worldPos, worldVector);
-
-    return { worldPos.x, worldPos.y };
+    return pos + screenPos;
 }
 
-Vector2 Camera::WorldToScreen(Vector2 worldPos)
+Vector2 Camera::WorldToScreen(const Vector2& worldPos)
 {
-    XMFLOAT4 worldPos3D(worldPos.x, worldPos.y, 0.0f, 1.0f);
-
-    XMVECTOR transformedPos = XMVector4Transform(XMLoadFloat4(&worldPos3D), view * viewProjection.projection);
-
-    Vector2 screenPos;
-    screenPos.x = (XMVectorGetX(transformedPos) + 1.0f) * 0.5f * SCREEN_WIDTH;
-    screenPos.y = (1.0f - XMVectorGetY(transformedPos)) * 0.5f * SCREEN_HEIGHT;
-
-    return screenPos;
+    return worldPos - pos;
 }

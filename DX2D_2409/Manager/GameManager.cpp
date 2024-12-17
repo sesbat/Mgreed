@@ -2,12 +2,12 @@
 
 #include "Scenes/MapEditorScene.h"
 #include "Scenes/GameScene.h"
-#include "Scenes/SampleScene.h"
 
 GameManager::GameManager()
 {
     Init();
 
+    PlayerManager::Get();
     SceneManager::Get()->Add("Start", new MapEditorScene());
     SceneManager::Get()->Add("Game", new GameScene());
 
@@ -29,12 +29,16 @@ GameManager::~GameManager()
     SceneManager::Delete();
     EventManager::Delete();
     EffectManager::Delete();
+
+    PlayerManager::Delete();
 }
 
 void GameManager::Update()
 {
     if (KEY->Down('R'))
+    {
         SceneManager::Get()->ChangeScene("Game");
+    }
     Timer::Get()->Update();
     Keyboard::Get()->Update();
 

@@ -3,26 +3,43 @@
 
 GameScene::GameScene()
 {
-	player = new Player();
-	LoadGameMap("map_data.bin");
+	//curMap = MapManager::Get()->GetSelectedMap();
+	CAM->SetTarget(PLAYER);
+
+	goldbar = new GoldBar();
+	goldbar->SetPos(CENTER);
+	aed = new AED();
+	aed->SetPos(CENTER);
+	coin = new Coin();
+	coin->SetPos(CENTER);
 }
 
 GameScene::~GameScene()
 {
-	delete player;
 	delete curMap;
+}
+
+void GameScene::Start()
+{
+	curMap = MapManager::Get()->GetSelectedMap();
 }
 
 void GameScene::Update()
 {
 	curMap->Update();
-	player->Update();
+	PLAYER->Update();
+	goldbar->Update();
+	aed->Update();
+	coin->Update();
 }
 
 void GameScene::Render()
 {
 	curMap->Render();
-	player->Render();
+	PLAYER->Render();
+	goldbar->Render();
+	aed->Render();
+	coin->Render();
 }
 
 void GameScene::PostRender()

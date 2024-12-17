@@ -1,6 +1,6 @@
 #pragma once
 
-class Action
+class Action : public Transform
 {
 public:
     Action() = default;
@@ -19,11 +19,10 @@ public:
     Clip* GetClip(int index) { return clips[index]; }
     Clip* GetCurClip() { return clips[curState]; }
 
-    void LoadClip(string path, string file, bool isLoop, float speed = 1.0f);
+    void LoadClip(string path, string file, bool isLoop, float speed = 1.0f , Vector2 offset = Vector2());
     void LoadClip(wstring file, int frameX, int frameY, bool isLoop, float speed = 1.0f);
 
     void SetState(int state);
-
 protected:
     vector<Clip*> clips;
     int curState = 0;

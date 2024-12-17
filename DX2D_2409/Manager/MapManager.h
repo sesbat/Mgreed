@@ -12,9 +12,11 @@ public:
 
     const vector<Map*>& GetMaps() const { return maps; }
     Map* GetMapByName(const string& name);
-    void SetSelectedMap(Map* map) { selectedMap = map; }
     Map* GetSelectedMap() const { return selectedMap; }
 
+    void SetSelectedMap(Map* map) { selectedMap = map; }
+
+    void CheckCollision();
 private:
     MapManager() {}
     ~MapManager();

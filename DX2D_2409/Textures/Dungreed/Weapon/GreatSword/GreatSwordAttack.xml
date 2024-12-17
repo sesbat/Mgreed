@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:5508dc1878ea93152c13272d097c1e41:e4281f5bb56424100a05c6aa94359bcd:882e4a47248a6d9fff1d885021b21abe$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="GreatSwordAttack.png" width="64" height="90">
+    <sprite n="GreatSword0.png" x="41" y="1" w="13" h="29" pX="0.5" pY="0.5"/>
+    <sprite n="GreatSword1.png" x="40" y="41" w="23" h="23" pX="0.5" pY="0.5"/>
+    <sprite n="GreatSword2.png" x="40" y="41" w="23" h="23" pX="0.5" pY="0.5"/>
+    <sprite n="GreatSword3.png" x="1" y="41" w="37" h="42" pX="0.5" pY="0.5"/>
+    <sprite n="GreatSword4.png" x="1" y="1" w="38" h="38" pX="0.5" pY="0.5"/>
+    <sprite n="GreatSword5.png" x="40" y="66" w="23" h="23" pX="0.5" pY="0.5"/>
+    <sprite n="GreatSword6.png" x="40" y="66" w="23" h="23" pX="0.5" pY="0.5"/>
+</TextureAtlas>

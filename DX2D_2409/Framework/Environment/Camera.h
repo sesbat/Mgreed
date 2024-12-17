@@ -20,8 +20,8 @@ public:
 
     void SetTarget(Transform* target) { this->target = target; }
 
-    Vector2 ScreenToWorld(Vector2 screenPos);
-    Vector2 WorldToScreen(Vector2 worldPos);
+    Vector2 ScreenToWorld(const Vector2& screenPos);
+    Vector2 WorldToScreen(const Vector2& worldPos);
 private:
     void Init();
 

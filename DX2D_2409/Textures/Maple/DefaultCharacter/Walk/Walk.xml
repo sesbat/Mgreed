@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:2553123117c245bfe5f80a83a7e15b70:b0533f58058182944f4fa8284a773206:fd50e266c5a51fd6223af09c10d79d34$ -->
+<!-- $TexturePacker:SmartUpdate:b637c91ba07b8e627caa07140cea7f06:b0533f58058182944f4fa8284a773206:fd50e266c5a51fd6223af09c10d79d34$ -->
 <!--Format:
 n  => name of the sprite
 x  => sprite x pos in texture
@@ -19,9 +19,9 @@ vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
 verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
 triangles  => sprite triangulation, 3 vertex indices per triangle
 -->
-<TextureAtlas imagePath="Walk.png" width="137" height="378">
-    <sprite n="avatar_walk1(0)_default(0).png" x="1" y="189" w="133" h="94" pX="0.5" pY="0.5"/>
-    <sprite n="avatar_walk1(1)_default(0).png" x="1" y="1" w="135" h="93" pX="0.5" pY="0.5"/>
-    <sprite n="avatar_walk1(2)_default(0).png" x="1" y="96" w="134" h="91" pX="0.5" pY="0.5"/>
-    <sprite n="avatar_walk1(3)_default(0).png" x="1" y="285" w="133" h="92" pX="0.5" pY="0.5"/>
+<TextureAtlas imagePath="Walk.png" width="135" height="370">
+    <sprite n="avatar_walk1(0)_default(0).png" x="0" y="184" w="133" h="94" pX="0.5" pY="0.5"/>
+    <sprite n="avatar_walk1(1)_default(0).png" x="0" y="0" w="135" h="93" pX="0.5" pY="0.5"/>
+    <sprite n="avatar_walk1(2)_default(0).png" x="0" y="93" w="134" h="91" pX="0.5" pY="0.5"/>
+    <sprite n="avatar_walk1(3)_default(0).png" x="0" y="278" w="133" h="92" pX="0.5" pY="0.5"/>
 </TextureAtlas>

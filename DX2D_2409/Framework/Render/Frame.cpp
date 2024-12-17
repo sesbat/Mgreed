@@ -1,12 +1,12 @@
 #include "Framework.h"
 
-Frame::Frame(wstring textureFile, Vector2 startUV, Vector2 endUV)
+Frame::Frame(wstring textureFile, Vector2 startUV, Vector2 endUV, Vector2 pos)
 {
 	material = new Material(textureFile);
 	size = (endUV - startUV) * material->GetTexture()->GetSize();
 
 	mesh = new Mesh();
-	MakeMesh(startUV, endUV);
+	MakeMesh(startUV, endUV , pos);
 	mesh->CreateMesh();
 }
 

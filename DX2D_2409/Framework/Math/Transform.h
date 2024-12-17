@@ -34,6 +34,10 @@ public:
     void SetScale(float x, float y) { scale = { x, y }; }
     void SetRot(float x, float y, float z) { rot = { x, y, z }; }
 
+    void SetRotX(float x) { rot.x = x; }
+    void SetRotY(float y) { rot.y = y; }
+    void SetRotZ(float z) { rot.z = z; }
+
     bool IsActive() const;
     void SetActive(bool isActive) { this->isActive = isActive; }
 

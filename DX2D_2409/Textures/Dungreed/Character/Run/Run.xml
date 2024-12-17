@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:66bbe8ae884b4ec6c334e8891c7749d4:58db6287a35d4a2542a4f34e7c3545a2:ed982377c07a778df57b538fb5e157cd$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="Run.png" width="166" height="24">
+    <sprite n="CharRun0.png" x="1" y="1" w="21" h="21" pX="0.5" pY="0.5"/>
+    <sprite n="CharRun1.png" x="24" y="1" w="18" h="22" pX="0.5" pY="0.5"/>
+    <sprite n="CharRun2.png" x="44" y="1" w="18" h="22" pX="0.5" pY="0.5"/>
+    <sprite n="CharRun3.png" x="64" y="1" w="19" h="22" pX="0.5" pY="0.5"/>
+    <sprite n="CharRun4.png" x="85" y="1" w="19" h="21" pX="0.5" pY="0.5"/>
+    <sprite n="CharRun5.png" x="106" y="1" w="17" h="22" pX="0.5" pY="0.5"/>
+    <sprite n="CharRun6.png" x="125" y="1" w="18" h="22" pX="0.5" pY="0.5"/>
+    <sprite n="CharRun7.png" x="145" y="1" w="20" h="22" pX="0.5" pY="0.5"/>
+</TextureAtlas>

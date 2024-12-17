@@ -18,7 +18,8 @@ public:
     virtual void Gravity();
 
     void SetVelocityY(float velocityY) { velocity.y = velocityY; }
-
+    void SetVelocity(Vector2 velocity) { this->velocity = velocity; }
+    void AddVelocity(Vector2 velocity) { this->velocity += velocity; }
 protected:
     float speed = 100.0f;
     Vector2 velocity;

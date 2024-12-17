@@ -3,7 +3,7 @@
 PlayerMove::PlayerMove(Player* player)
 	:PlayerAction(player)
 {
-    LoadClip("Textures/Maple/DefaultCharacter/Walk/", "Walk.xml", true);
+    //LoadClip("Textures/Dungreed/Character/Walk/", "Walk.xml", true);
 }
 
 void PlayerMove::Update()
